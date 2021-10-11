@@ -127,7 +127,30 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="126dp"
-        android:orientation="horizontal" />
+        android:layout_height="99dp"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="223dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/angulo_a_la_izquierda" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/gira_a_la_derecha" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewPuntaje"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="96sp" />
 
 </LinearLayout>
