@@ -127,22 +127,28 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="99dp"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="223dp"
-            android:layout_height="match_parent"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/angulo_a_la_izquierda" />
+            android:background="@drawable/buttonshape"
+            android:scaleType="fitCenter"
+            app:srcCompat="?attr/actionModeCloseDrawable"
+            tools:layout_editor_absoluteX="36dp" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_weight="1"
-            app:srcCompat="@drawable/gira_a_la_derecha" />
+            android:background="@drawable/buttonshape"
+            android:scaleType="fitCenter"
+            app:srcCompat="?android:attr/fingerprintAuthDrawable"
+            tools:layout_editor_absoluteX="272dp" />
     </LinearLayout>
 
     <TextView
