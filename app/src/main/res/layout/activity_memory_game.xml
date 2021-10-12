@@ -127,27 +127,27 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="79dp"
         android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/imageButton"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:scaleType="fitCenter"
-            app:srcCompat="?attr/actionModeCloseDrawable"
+            app:srcCompat="@drawable/angulo_a_la_izquierda"
             tools:layout_editor_absoluteX="36dp" />
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:scaleType="fitCenter"
-            app:srcCompat="?android:attr/fingerprintAuthDrawable"
+            app:srcCompat="@drawable/gira_a_la_derecha"
             tools:layout_editor_absoluteX="272dp" />
     </LinearLayout>
 
