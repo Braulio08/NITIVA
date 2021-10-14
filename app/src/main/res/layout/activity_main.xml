@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnClose"
+        android:id="@+id/btnExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="23dp"
@@ -59,19 +59,19 @@
         android:id="@+id/btnMemory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="64dp"
-        android:layout_marginEnd="28dp"
         android:text="Memoria"
-        app:layout_constraintEnd_toStartOf="@+id/button6"
+        app:layout_constraintStart_toEndOf="@+id/btnReading"
         app:layout_constraintTop_toBottomOf="@+id/btnWordSeach" />
 
     <Button
-        android:id="@+id/button6"
+        android:id="@+id/btnPuzzle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="28dp"
-        android:text="Button"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="56dp"
+        android:text="Puzzles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMemory" />
 
@@ -79,24 +79,24 @@
         android:id="@+id/btnWordSeach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="129dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="132dp"
+        android:layout_marginEnd="44dp"
         android:text="Sopa de Letras"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/imageView" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/btnSudoku"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
         android:layout_marginTop="5dp"
-        android:text="Button"
+        android:text="Sudoku"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMemory" />
 
     <Button
-        android:id="@+id/btnLectura"
+        android:id="@+id/btnReading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="36dp"
