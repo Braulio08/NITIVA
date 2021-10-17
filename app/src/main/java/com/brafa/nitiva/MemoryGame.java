@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Random;
 
 public class MemoryGame extends AppCompatActivity {
 
@@ -20,10 +21,16 @@ public class MemoryGame extends AppCompatActivity {
     ImageButton[] matriz = new ImageButton[12];
     ImageButton salir, reiniciar;
     TextView puntajePantalla;
-    int puntaje;
-    int aciertos;
+    int puntaje = 0;
+    int aciertos = 0;
     int[] imagenes;
+    int[] imagenes1;
+    int[] imagenes2;
+    int[] imagenes3;
+    int[] imagenes4;
     int fondo;
+    Random random = new Random();
+    int numberRandom;
     ArrayList<Integer>arrayCaos;
     ImageButton primero;
     int number1, number2;
@@ -50,6 +57,7 @@ public class MemoryGame extends AppCompatActivity {
         imb10 = findViewById(R.id.btn10);
         imb11 = findViewById(R.id.btn11);
 
+
         matriz[0] = imb00;
         matriz[1] = imb01;
         matriz[2] = imb02;
@@ -66,27 +74,50 @@ public class MemoryGame extends AppCompatActivity {
     }
     public void cargarTexto(){
         puntajePantalla = findViewById(R.id.textViewPuntaje);
-        puntaje=0;
-        aciertos=0;
         puntajePantalla.setText(puntaje);
     }
     public void cargarImagenes(){
         imagenes = new int[]{
-                R.drawable.bee,
-                R.drawable.cherry,
-                R.drawable.cow,
-                R.drawable.flower,
-                R.drawable.grapes,
-                R.drawable.hen,
                 R.drawable.leaf,
                 R.drawable.parrot,
                 R.drawable.pawprint,
                 R.drawable.pig,
                 R.drawable.rose,
-                R.drawable.strawberry,
-                R.drawable.sunny
+                R.drawable.flower,
         };
-        fondo = R.drawable.background;
+        imagenes1 = new int[]{
+                R.drawable.bee,
+                R.drawable.cherry,
+                R.drawable.cow,
+                R.drawable.flower,
+                R.drawable.grapes,
+                R.drawable.hen
+        };
+        imagenes2 = new int[]{
+                R.drawable.rose,
+                R.drawable.strawberry,
+                R.drawable.sunny,
+                R.drawable.flower,
+                R.drawable.grapes,
+                R.drawable.hen
+        };
+        imagenes3 = new int[]{
+                R.drawable.rose,
+                R.drawable.cow,
+                R.drawable.sunny,
+                R.drawable.flower,
+                R.drawable.leaf,
+                R.drawable.hen
+        };
+        imagenes4 = new int[]{
+                R.drawable.pawprint,
+                R.drawable.cow,
+                R.drawable.strawberry,
+                R.drawable.bee,
+                R.drawable.leaf,
+                R.drawable.hen
+        };
+        fondo = R.drawable.leaf;
     }
     public void cargarBotones(){
         salir = findViewById(R.id.imageButtonSalir);
@@ -120,9 +151,29 @@ public class MemoryGame extends AppCompatActivity {
 
         cargarImagenes();
         arrayCaos = barajar(imagenes.length);
+        numberRandom = random.nextInt(5);
         for (int i = 0; i < matriz.length; i++) {
             matriz[i].setScaleType(ImageView.ScaleType.FIT_CENTER);
-            matriz[i].setImageResource(imagenes[arrayCaos.get(i)]);
+            matriz[i].setImageResource(fondo);
+            /*switch (numberRandom){
+                case 0:
+                    matriz[i].setImageResource(imagenes[arrayCaos.get(i)]);
+                    break;
+                case 1:
+                    matriz[i].setImageResource(imagenes1[arrayCaos.get(i)]);
+                    break;
+                case 2:
+                    matriz[i].setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+                case 3:
+                    matriz[i].setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+                case 4:
+                    matriz[i].setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+            }*/
+
+
         }
     }
 }
