@@ -117,7 +117,7 @@ public class MemoryGame extends AppCompatActivity {
                 R.drawable.leaf,
                 R.drawable.hen
         };
-        fondo = R.drawable.leaf;
+        fondo = R.drawable.fingerprint;
     }
     public void cargarBotones(){
         salir = findViewById(R.id.imageButtonSalir);

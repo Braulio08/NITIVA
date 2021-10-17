@@ -22,9 +22,9 @@
         <TextView
             android:id="@+id/textViewPuntaje"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="0"
+            android:layout_height="match_parent"
             android:gravity="center"
+            android:text="0"
             android:textSize="60sp" />
 
     </LinearLayout>
@@ -42,8 +42,9 @@
             android:layout_row="0"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn01"
@@ -52,8 +53,9 @@
             android:layout_row="0"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn02"
@@ -62,8 +64,9 @@
             android:layout_row="0"
             android:layout_column="2"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn03"
@@ -72,8 +75,9 @@
             android:layout_row="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn04"
@@ -82,8 +86,9 @@
             android:layout_row="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn05"
@@ -92,8 +97,9 @@
             android:layout_row="1"
             android:layout_column="2"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn06"
@@ -102,8 +108,9 @@
             android:layout_row="2"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn07"
@@ -112,8 +119,9 @@
             android:layout_row="2"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn08"
@@ -122,8 +130,9 @@
             android:layout_row="2"
             android:layout_column="2"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn09"
@@ -132,8 +141,9 @@
             android:layout_row="3"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn10"
@@ -142,8 +152,9 @@
             android:layout_row="3"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
         <ImageButton
             android:id="@+id/btn11"
@@ -152,14 +163,16 @@
             android:layout_row="3"
             android:layout_column="2"
             android:layout_columnWeight="1"
-            android:hapticFeedbackEnabled="false"
-            android:background="@drawable/imageshape"/>
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
 
     </GridLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal">
 
         <ImageButton
