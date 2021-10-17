@@ -109,7 +109,7 @@ public class MemoryGame extends AppCompatActivity {
     private ArrayList<Integer> barajar(int longitud){
         ArrayList<Integer> result = new ArrayList<Integer>();
         for (int i = 0; i < longitud*2; i++) {
-            result.add(i%longitud);
+            result.add(i % longitud);
         }
         Collections.shuffle(result);
         return result;
@@ -117,7 +117,7 @@ public class MemoryGame extends AppCompatActivity {
     public void iniciar(){
         cargarMatriz();
         cargarBotones();
-        cargarTexto();
+
         cargarImagenes();
         arrayCaos = barajar(imagenes.length);
         for (int i = 0; i < matriz.length; i++) {
