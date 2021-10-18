@@ -1,22 +1,29 @@
 package com.brafa.nitiva;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     Button memory;
+    Button exit;
+    Button sound;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Activar un botón
-        memory = findViewById(R.id.btnMemory);
+        memory = findViewById(R.id.btnMemory); //Buscar el botón en la interfaz
         memory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -25,5 +32,46 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
+
+        exit = findViewById(R.id.btnExit);
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showDialogMessage();
+                //finish();
+            }
+        });
+
+        sound = findViewById(R.id.btnSound);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (true){
+
+                    Toast.makeText(getApplicationContext(), "Has desactivado el sonido.", Toast.LENGTH_LONG);
+                } else {
+
+                    Toast.makeText(getApplicationContext(), "Has activado el sonido.", Toast.LENGTH_LONG);
+                }
+            }
+        });
+    }
+
+    private void showDialogMessage() {
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(this);
+        alertDialog.setTitle("Salir").setMessage("¿Está seguro(a) de que desea salir?")
+        .setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                dialogInterface.cancel();
+            }
+        })
+        .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                finish();
+            }
+        }).show();
+        alertDialog.create();
     }
 }
