@@ -248,12 +248,52 @@ public class MemoryGame extends AppCompatActivity {
                 aciertos++;
                 puntaje++;
                 puntajePantalla.setText(""+puntaje);
-                if (aciertos==6){
-                    Intent intent = new Intent(MemoryGame.this, Result.class);
-                    intent.putExtra("puntaje", puntaje);
-                    startActivity(intent);
-                    finish();
+
+                switch (numberRandom){
+                    case 0:
+                        if (aciertos==imagenes.length){
+                            Intent intent = new Intent(MemoryGame.this, Result.class);
+                            intent.putExtra("puntaje", puntaje);
+                            startActivity(intent);
+                            finish();
+                        }
+                        break;
+                    case 1:
+                        if (aciertos==imagenes1.length){
+                            Intent intent = new Intent(MemoryGame.this, Result.class);
+                            intent.putExtra("puntaje", puntaje);
+                            startActivity(intent);
+                            finish();
+                        }
+                        break;
+                    case 2:
+                        if (aciertos==imagenes2.length){
+                            Intent intent = new Intent(MemoryGame.this, Result.class);
+                            intent.putExtra("puntaje", puntaje);
+                            startActivity(intent);
+                            finish();
+                        }
+                        break;
+                    case 3:
+                        if (aciertos==imagenes3.length){
+                            Intent intent = new Intent(MemoryGame.this, Result.class);
+                            intent.putExtra("puntaje", puntaje);
+                            startActivity(intent);
+                            finish();
+                        }
+                        break;
+                    case 4:
+                        if (aciertos==imagenes4.length){
+                            Intent intent = new Intent(MemoryGame.this, Result.class);
+                            intent.putExtra("puntaje", puntaje);
+                            startActivity(intent);
+                            finish();
+                        }
+                        break;
                 }
+
+
+
             }else{
                 handler.postDelayed(new Runnable() {
                     @Override
