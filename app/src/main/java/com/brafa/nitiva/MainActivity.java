@@ -9,11 +9,12 @@ import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button memory;
+    ImageButton memory;
     Button exit;
     Button sound;
 
@@ -23,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         //Activar un botón
-        memory = findViewById(R.id.btnMemory); //Buscar el botón en la interfaz
+        memory = findViewById(R.id.imbMemory); //Buscar el botón en la interfaz
         memory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

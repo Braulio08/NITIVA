@@ -22,7 +22,7 @@
         android:id="@+id/btnExit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="23dp"
+        android:layout_marginEnd="21dp"
         android:layout_marginBottom="40dp"
         android:text="Salir"
         app:icon="?attr/actionModeCloseDrawable"
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="37dp"
         android:text="Sonido"
         app:icon="@android:drawable/ic_lock_silent_mode_off"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -56,53 +56,58 @@
         app:srcCompat="@drawable/brain" />
 
     <Button
-        android:id="@+id/btnMemory"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="64dp"
-        android:text="Memoria"
-        app:layout_constraintStart_toEndOf="@+id/btnReading"
-        app:layout_constraintTop_toBottomOf="@+id/btnWordSeach" />
-
-    <Button
         android:id="@+id/btnPuzzle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:layout_marginEnd="56dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="75dp"
         android:text="Crucigrama"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMemory" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnWordSeach"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="132dp"
-        android:layout_marginEnd="44dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="42dp"
         android:text="Sopa de Letras"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView" />
+        app:layout_constraintBottom_toTopOf="@+id/imbMemory"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnSudoku"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginTop="5dp"
-        android:text="Sudoku"
+        android:layout_marginStart="52dp"
+        android:text="Gato"
+        app:layout_constraintBottom_toBottomOf="@+id/btnPuzzle"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMemory" />
+        app:layout_constraintTop_toTopOf="@+id/btnPuzzle"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnReading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:layout_marginBottom="12dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="16dp"
         android:text="Lectura"
-        app:layout_constraintBottom_toTopOf="@+id/btnMemory"
+        app:layout_constraintBottom_toTopOf="@+id/imbMemory"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imbMemory"
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginEnd="132dp"
+        android:background="@drawable/buttonhomeshape"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnWordSeach"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/photos" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
