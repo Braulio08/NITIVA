@@ -48,10 +48,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (true){
 
-                    Toast.makeText(getApplicationContext(), "Has desactivado el sonido.", Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(), "Has desactivado el sonido.", Toast.LENGTH_LONG).show();
                 } else {
 
-                    Toast.makeText(getApplicationContext(), "Has activado el sonido.", Toast.LENGTH_LONG);
+                    Toast.makeText(getApplicationContext(), "Has activado el sonido.", Toast.LENGTH_LONG).show();
                 }
             }
         });
