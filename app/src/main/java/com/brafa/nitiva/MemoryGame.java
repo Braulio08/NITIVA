@@ -183,7 +183,7 @@ public class MemoryGame extends AppCompatActivity {
                     matriz[i].setImageResource(fondo);
                 }
             }
-        }, 2000);
+        }, 1000);
         for (int i = 0; i < matriz.length; i++) {
             final int j = i;
             matriz[i].setEnabled(true);
