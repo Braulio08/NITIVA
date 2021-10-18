@@ -154,8 +154,7 @@ public class MemoryGame extends AppCompatActivity {
         numberRandom = random.nextInt(5);
         for (int i = 0; i < matriz.length; i++) {
             matriz[i].setScaleType(ImageView.ScaleType.FIT_CENTER);
-            matriz[i].setImageResource(fondo);
-            /*switch (numberRandom){
+            switch (numberRandom){
                 case 0:
                     matriz[i].setImageResource(imagenes[arrayCaos.get(i)]);
                     break;
@@ -171,9 +170,105 @@ public class MemoryGame extends AppCompatActivity {
                 case 4:
                     matriz[i].setImageResource(imagenes2[arrayCaos.get(i)]);
                     break;
-            }*/
+            }
+        }
 
-
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                for (int i = 0; i < matriz.length; i++) {
+                    matriz[i].setScaleType(ImageView.ScaleType.FIT_CENTER);
+                    matriz[i].setImageResource(fondo);
+                }
+            }
+        }, 500);
+        for (int i = 0; i < matriz.length; i++) {
+            final int j = i;
+            matriz[i].setEnabled(true);
+            matriz[i].setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(!bandera){
+                        comprobar(j, matriz[j]);
+                    }
+                }
+            });
+        }
+    }
+    private void comprobar(int i, final ImageButton imb){
+        if(primero == null){
+            primero = imb;
+            primero.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            switch (numberRandom){
+                case 0:
+                    primero.setImageResource(imagenes[arrayCaos.get(i)]);
+                    break;
+                case 1:
+                    primero.setImageResource(imagenes1[arrayCaos.get(i)]);
+                    break;
+                case 2:
+                    primero.setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+                case 3:
+                    primero.setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+                case 4:
+                    primero.setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+            }
+            primero.setEnabled(false);
+            number1=arrayCaos.get(i);
+        }else{
+            bandera = true;
+            imb.setScaleType(ImageView.ScaleType.FIT_CENTER);
+            switch (numberRandom){
+                case 0:
+                    imb.setImageResource(imagenes[arrayCaos.get(i)]);
+                    break;
+                case 1:
+                    imb.setImageResource(imagenes1[arrayCaos.get(i)]);
+                    break;
+                case 2:
+                    imb.setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+                case 3:
+                    imb.setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+                case 4:
+                    imb.setImageResource(imagenes2[arrayCaos.get(i)]);
+                    break;
+            }
+            imb.setEnabled(false);
+            number2=arrayCaos.get(i);
+            if (number1==number2){
+                primero = null;
+                bandera = false;
+                aciertos++;
+                puntaje++;
+                puntajePantalla.setText(puntaje);
+                if (aciertos==12){
+                    Intent intent = new Intent(MemoryGame.this, Result.class);
+                    intent.putExtra("puntaje", puntaje);
+                    startActivity(intent);
+                    finish();
+                }
+            }else{
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        primero.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                        primero.setImageResource(fondo);
+                        primero.setEnabled(true);
+                        imb.setScaleType(ImageView.ScaleType.FIT_CENTER);
+                        imb.setImageResource(fondo);
+                        imb.setEnabled(true);
+                        bandera=false;
+                        primero=null;
+                        puntaje--;
+                        puntajePantalla.setText(puntaje);
+                    }
+                }, 1000);
+            }
         }
     }
 }
