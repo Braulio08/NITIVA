@@ -74,7 +74,9 @@ public class MemoryGame extends AppCompatActivity {
     }
     public void cargarTexto(){
         puntajePantalla = findViewById(R.id.textViewPuntaje);
-        puntajePantalla.setText(puntaje);
+        puntaje=0;
+        aciertos=0;
+        puntajePantalla.setText(""+puntaje);
     }
     public void cargarImagenes(){
         imagenes = new int[]{
@@ -148,7 +150,7 @@ public class MemoryGame extends AppCompatActivity {
     public void iniciar(){
         cargarMatriz();
         cargarBotones();
-
+        cargarTexto();
         cargarImagenes();
         arrayCaos = barajar(imagenes.length);
         numberRandom = random.nextInt(5);
@@ -181,7 +183,7 @@ public class MemoryGame extends AppCompatActivity {
                     matriz[i].setImageResource(fondo);
                 }
             }
-        }, 500);
+        }, 2000);
         for (int i = 0; i < matriz.length; i++) {
             final int j = i;
             matriz[i].setEnabled(true);
@@ -245,8 +247,8 @@ public class MemoryGame extends AppCompatActivity {
                 bandera = false;
                 aciertos++;
                 puntaje++;
-                puntajePantalla.setText(puntaje);
-                if (aciertos==12){
+                puntajePantalla.setText(""+puntaje);
+                if (aciertos==6){
                     Intent intent = new Intent(MemoryGame.this, Result.class);
                     intent.putExtra("puntaje", puntaje);
                     startActivity(intent);
@@ -265,7 +267,7 @@ public class MemoryGame extends AppCompatActivity {
                         bandera=false;
                         primero=null;
                         puntaje--;
-                        puntajePantalla.setText(puntaje);
+                        puntajePantalla.setText(""+puntaje);
                     }
                 }, 1000);
             }
