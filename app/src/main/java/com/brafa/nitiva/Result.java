@@ -13,7 +13,10 @@ public class Result extends AppCompatActivity {
     TextView result;
     Button playAgain;
     Button exit;
-    int score=0;
+    int puntajeMemory=0;
+    int nivelNumbersMemory=0;
+    String sw = "";
+    String userResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,15 +26,40 @@ public class Result extends AppCompatActivity {
         playAgain = findViewById(R.id.buttonPlayAgain);
         exit = findViewById(R.id.buttonExit);
         Intent intent = getIntent();
-        score = intent.getIntExtra("puntaje", 0);
-        String userScore = String.valueOf(score);
-        result.setText("Puntaje: "+userScore);
+
+
+        puntajeMemory = intent.getIntExtra("puntajeMemory", 0);
+        nivelNumbersMemory = intent.getIntExtra("nivelNumber", 0);
+
+
+        if(puntajeMemory>0){
+            sw = "Memory";
+            userResult = "Puntaje: "+ puntajeMemory;
+            result.setText(userResult);
+        }
+        if(nivelNumbersMemory>0){
+            sw = "NumberMemory";
+            userResult = "Nivel: "+ nivelNumbersMemory;
+            result.setText(userResult);
+        }
+
+
+
         playAgain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Result.this, MemoryGame.class);
-                startActivity(intent);
-                finish();
+                switch (sw){
+                    case "Memory":
+                        Intent intent = new Intent(Result.this, MemoryGame.class);
+                        startActivity(intent);
+                        finish();
+                        break;
+                    case "NumberMemory":
+                        Intent intent2 = new Intent(Result.this, NumbersMemoryGame.class);
+                        startActivity(intent2);
+                        finish();
+                        break;
+                }
             }
         });
         exit.setOnClickListener(new View.OnClickListener() {

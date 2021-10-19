@@ -246,14 +246,14 @@ public class MemoryGame extends AppCompatActivity {
                 primero = null;
                 bandera = false;
                 aciertos++;
-                puntaje++;
+                puntaje+=2;
                 puntajePantalla.setText(""+puntaje);
 
                 switch (numberRandom){
                     case 0:
                         if (aciertos==imagenes.length){
                             Intent intent = new Intent(MemoryGame.this, Result.class);
-                            intent.putExtra("puntaje", puntaje);
+                            intent.putExtra("puntajeMemory", puntaje);
                             startActivity(intent);
                             finish();
                         }
@@ -261,7 +261,7 @@ public class MemoryGame extends AppCompatActivity {
                     case 1:
                         if (aciertos==imagenes1.length){
                             Intent intent = new Intent(MemoryGame.this, Result.class);
-                            intent.putExtra("puntaje", puntaje);
+                            intent.putExtra("puntajeMemory", puntaje);
                             startActivity(intent);
                             finish();
                         }
@@ -269,7 +269,7 @@ public class MemoryGame extends AppCompatActivity {
                     case 2:
                         if (aciertos==imagenes2.length){
                             Intent intent = new Intent(MemoryGame.this, Result.class);
-                            intent.putExtra("puntaje", puntaje);
+                            intent.putExtra("puntajeMemory", puntaje);
                             startActivity(intent);
                             finish();
                         }
@@ -277,7 +277,7 @@ public class MemoryGame extends AppCompatActivity {
                     case 3:
                         if (aciertos==imagenes3.length){
                             Intent intent = new Intent(MemoryGame.this, Result.class);
-                            intent.putExtra("puntaje", puntaje);
+                            intent.putExtra("puntajeMemory", puntaje);
                             startActivity(intent);
                             finish();
                         }
@@ -285,7 +285,7 @@ public class MemoryGame extends AppCompatActivity {
                     case 4:
                         if (aciertos==imagenes4.length){
                             Intent intent = new Intent(MemoryGame.this, Result.class);
-                            intent.putExtra("puntaje", puntaje);
+                            intent.putExtra("puntajeMemory", puntaje);
                             startActivity(intent);
                             finish();
                         }
@@ -306,7 +306,9 @@ public class MemoryGame extends AppCompatActivity {
                         imb.setEnabled(true);
                         bandera=false;
                         primero=null;
-                        puntaje--;
+                        if(!(puntaje<=1)){
+                            puntaje--;
+                        }
                         puntajePantalla.setText(""+puntaje);
                     }
                 }, 1000);

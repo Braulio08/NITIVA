@@ -15,6 +15,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     ImageButton memory;
+    Button numberMemory;
     Button exit;
     Button sound;
 
@@ -25,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Activar un botón
         memory = findViewById(R.id.imbMemory); //Buscar el botón en la interfaz
+        numberMemory = findViewById(R.id.btnNumberMemory);
+        numberMemory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, NumbersMemoryGame.class);
+                startActivity(intent);
+                finish();
+            }
+        });
         memory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
