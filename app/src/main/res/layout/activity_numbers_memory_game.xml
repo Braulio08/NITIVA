@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    tools:context=".NumbersMemoryGame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/textViewLevel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Nivel: 1"
+            android:textAlignment="textStart"
+            android:textSize="48sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewNumberShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0000"
+        android:textAlignment="center"
+        android:textSize="80sp" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Respuesta"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="60sp" />
+
+    <Button
+        android:id="@+id/btnRevisar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Revisar"
+        android:textSize="48sp" />
+</LinearLayout>

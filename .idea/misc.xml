@@ -6,10 +6,12 @@
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/buttonhomeshape.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/buttonshape.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/imageshape.xml" value="0.21614583333333334" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_memory.xml" value="0.21" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_memory_game.xml" value="0.22" />
+        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_numbers_memory_game.xml" value="0.25" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_result.xml" value="0.21" />
+        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_result_nums_memory.xml" value="0.2" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/mipmap-anydpi-v26/brain.xml" value="0.2203125" />
       </map>
