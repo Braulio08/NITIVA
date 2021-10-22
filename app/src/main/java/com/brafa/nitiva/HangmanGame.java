@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 public class HangmanGame extends AppCompatActivity {
 
+    private String [] palabras;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
