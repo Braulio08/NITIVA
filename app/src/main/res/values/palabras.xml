@@ -1,15 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string-array name="palabras">
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
-        <item></item>
+        <item>PERRO</item>
+        <item>GATO</item>
+        <item>PAJARO</item>
+        <item>MARIPOSA</item>
+        <item>ARBOL</item>
+        <item>CASA</item>
+        <item>PERSONA</item>
+        <item>IGLESIA</item>
+        <item>PRESIDENTE</item>
+        <item>ESCUELA</item>
+        <item>PARQUE</item>
+        <item>COMEDOR</item>
+        <item>MASCOTA</item>
+        <item>INSECTO</item>
+        <item>ESTRELLA</item>
+        <item>JUEGO</item>
+        <item>APRENDER</item>
+        <item>TECNOLOGIA</item>
+        <item>CABELLO</item>
+        <item>HOJAS</item>
+        <item>EDIFICIO</item>
+        <item>TELAS</item>
+        <item>TRAJE</item>
+        <item>VESTIDO</item>
+        <item>MONTAÑA</item>
+        <item>TIBURON</item>
+        <item>BALLENA</item>
+        <item>VOLCAN</item>
+        <item>PLAYA</item>
+        <item>BOSQUE</item>
+        <item>FUTURO</item>
+        <item>PASADO</item>
+        <item>PRESENTE</item>
+        <item>REGALO</item>
+        <item>DORMIR</item>
+        <item>LIBRO</item>
+        <item>LAPIZ</item>
+        <item>BORRADOR</item>
+        <item>COLORES</item>
+        <item>AMIGOS</item>
     </string-array>
 </resources>
