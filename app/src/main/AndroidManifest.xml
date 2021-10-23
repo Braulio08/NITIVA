@@ -10,7 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NITIVA">
         <activity
+
+            android:name=".HangmanGame"
+
             android:name=".TicTacToe"
+
             android:exported="false" />
         <activity
             android:name=".NumbersMemoryGame"
