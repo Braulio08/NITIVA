@@ -12,7 +12,8 @@
         <activity
 
             android:name=".HangmanGame"
-
+            android:exported="false" />
+        <activity
             android:name=".TicTacToe"
 
             android:exported="false" />
