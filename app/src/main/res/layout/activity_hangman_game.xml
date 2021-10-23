@@ -20,4 +20,14 @@
         android:layout_width="match_parent"
         android:layout_height="109dp"
         android:orientation="vertical"></LinearLayout>
+
+    <GridView
+        android:id="@+id/screenLetters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:numColumns="7"
+        android:padding="5dp"
+        android:verticalSpacing="5dp"
+        android:stretchMode="columnWidth"/>
 </LinearLayout>
