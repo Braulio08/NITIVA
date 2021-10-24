@@ -11,8 +11,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="1dp"
-        android:background="@drawable/charshape"
         android:text="A"
         android:textAlignment="center"
+        android:textColor="@color/white"
         android:textSize="60sp" />
 </LinearLayout>

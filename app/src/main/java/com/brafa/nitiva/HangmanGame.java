@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -89,6 +90,24 @@ public class HangmanGame extends AppCompatActivity {
                 correct = true;
                 numCorr++;
 
+                final int numVisibleChildren = wordView.getChildCount();
+                final int firstVisiblePosition = wordView.getFirstVisiblePosition();
+
+                for ( int j = 0; j < numVisibleChildren; j++ ) {
+                    int positionOfView = firstVisiblePosition + j;
+
+                    if (positionOfView == i) {
+                        View element = wordView.getChildAt(j);
+                        element.setBackgroundResource(R.drawable.buttonshape);
+                    }
+                }
+
+
+            }
+        }
+        if(correct){
+            if(numCorr== actual.length()){
+                Toast.makeText(getApplicationContext(),"Bien",Toast.LENGTH_LONG).show();
             }
         }
     }
