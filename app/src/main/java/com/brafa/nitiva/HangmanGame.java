@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
 import android.widget.LinearLayout;
@@ -41,10 +42,12 @@ public class HangmanGame extends AppCompatActivity {
         for (int i = 0; i < actual.length(); i++) {
             charView[i] = new TextView(this);
             charView[i].setText(""+actual.charAt(i));
-            charView[i].setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            charView[i].setGravity(Gravity.CENTER);
-            charView[i].setTextColor(Color.TRANSPARENT);
-            charView[i].setBackgroundResource(R.drawable.buttonshape);
+            charView[i].setLayoutParams(new ViewGroup.LayoutParams(130, ViewGroup.LayoutParams.WRAP_CONTENT));
+            charView[i].setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
+            charView[i].setTextColor(Color.BLACK);
+            charView[i].setTextSize(75);
+            charView[i].setBackgroundResource(R.drawable.charshape);
             palabraLayout.addView(charView[i]);
         }
         adapter = new LetterAdapter(this);
