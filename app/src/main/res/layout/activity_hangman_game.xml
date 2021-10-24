@@ -19,7 +19,8 @@
         android:id="@+id/LinearCharts"
         android:layout_width="match_parent"
         android:layout_height="109dp"
-        android:orientation="vertical"></LinearLayout>
+        android:orientation="horizontal"
+        android:gravity="center"/>
 
     <GridView
         android:id="@+id/screenLetters"
@@ -30,4 +31,6 @@
         android:padding="5dp"
         android:verticalSpacing="5dp"
         android:stretchMode="columnWidth"/>
+
+
 </LinearLayout>
