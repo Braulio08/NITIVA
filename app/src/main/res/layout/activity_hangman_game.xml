@@ -29,7 +29,6 @@
         android:gravity="center"
         android:numColumns="4"
         android:padding="5dp"
-        android:verticalSpacing="5dp"
         android:stretchMode="columnWidth"/>
 
 
