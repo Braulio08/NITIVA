@@ -25,6 +25,7 @@ public class HangmanGame extends AppCompatActivity {
     private WordAdapter wordAdapter;
     private GridView gridView, wordView;
     ArrayList<String> word = new ArrayList<>();
+    private int numCorr;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -74,6 +75,22 @@ public class HangmanGame extends AppCompatActivity {
         wordAdapter = new WordAdapter( word, this);
         wordView.setAdapter(wordAdapter);
 
+        numCorr =0;
+
+    }
+    public void letterPressed(View view){
+        String letter = ((TextView)view).getText().toString();
+        char letterChar = letter.charAt(0);
+        view.setVisibility(View.INVISIBLE);
+        boolean correct = false;
+
+        for (int i = 0; i < actual.length(); i++) {
+            if(actual.charAt(i)==letterChar){
+                correct = true;
+                numCorr++;
+
+            }
+        }
     }
 
 }
