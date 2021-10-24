@@ -18,10 +18,16 @@
     <LinearLayout
         android:id="@+id/LinearCharts"
         android:layout_width="match_parent"
-        android:layout_height="109dp"
-        android:orientation="horizontal"
-        android:gravity="center"/>
+        android:layout_height="15dp"
+        android:gravity="center"
+        android:orientation="horizontal" />
 
+    <GridView
+        android:id="@+id/screenWord"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:numColumns="10" />
     <GridView
         android:id="@+id/screenLetters"
         android:layout_width="match_parent"

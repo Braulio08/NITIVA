@@ -11,10 +11,34 @@ public class LetterAdapter extends BaseAdapter {
     private String[] letras;
     private LayoutInflater infoLetra;
     public LetterAdapter(Context context){
-        letras = new String[26];
-        for (int i = 0; i < letras.length; i++) {
-            letras[i]=""+(char)(i+'A');
-        }
+        letras = new String[27];
+        letras[0]=""+(char)('A');
+        letras[1]=""+(char)('B');
+        letras[2]=""+(char)('C');
+        letras[3]=""+(char)('D');
+        letras[4]=""+(char)('E');
+        letras[5]=""+(char)('F');
+        letras[6]=""+(char)('G');
+        letras[7]=""+(char)('H');
+        letras[8]=""+(char)('I');
+        letras[9]=""+(char)('J');
+        letras[10]=""+(char)('K');
+        letras[11]=""+(char)('M');
+        letras[12]=""+(char)('N');
+        letras[13]=""+(char)('Ñ');
+        letras[14]=""+(char)('L');
+        letras[15]=""+(char)('O');
+        letras[16]=""+(char)('P');
+        letras[17]=""+(char)('Q');
+        letras[18]=""+(char)('R');
+        letras[19]=""+(char)('S');
+        letras[20]=""+(char)('T');
+        letras[21]=""+(char)('U');
+        letras[22]=""+(char)('V');
+        letras[23]=""+(char)('W');
+        letras[24]=""+(char)('X');
+        letras[25]=""+(char)('Y');
+        letras[26]=""+(char)('Z');
         infoLetra = LayoutInflater.from(context);
     }
     @Override
