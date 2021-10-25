@@ -98,10 +98,10 @@ public class HangmanGame extends AppCompatActivity {
 
                     if (positionOfView == i) {
                         View element = wordView.getChildAt(j);
-                        element.setBackgroundResource(R.drawable.buttonshape);
+                        element.setBackgroundResource(R.drawable.charshape);
                     }
                 }
-
+            }else {
 
             }
         }
