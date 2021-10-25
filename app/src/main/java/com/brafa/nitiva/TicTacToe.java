@@ -14,6 +14,7 @@ import java.util.Random;
 public class TicTacToe extends AppCompatActivity {
 
     TextView txtWin;
+    Button close;
     Integer[] arregloBotones;
     int[] tableroGato = new int[] {
             0, 0, 0,
@@ -32,6 +33,7 @@ public class TicTacToe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_toe);
 
+        close = findViewById(R.id.btnClose);
         txtWin = findViewById(R.id.txtResult);
         txtWin.setVisibility(View.INVISIBLE);
 
@@ -50,15 +52,17 @@ public class TicTacToe extends AppCompatActivity {
                 vista.setBackgroundResource(R.drawable.cancel);
                 tableroGato[numBoton] = 1; //Asignar una X al gato
                 espaciosUsados += 1;
-                estado = comprobarEstado(); //Comprobar el estado de la partida
                 turno = 1;
+                estado = comprobarEstado(); //Comprobar el estado de la partida
+
                 terminarPartida();
 
                 if (estado == 0) {
                     simularIA();
                     espaciosUsados += 1;
-                    estado = comprobarEstado();
                     turno = -1;
+                    estado = comprobarEstado();
+
                     terminarPartida();
                 }
             }
@@ -117,6 +121,7 @@ public class TicTacToe extends AppCompatActivity {
             if (estado == 1) {
                 txtWin.setVisibility(View.VISIBLE);
                 txtWin.setTextColor(Color.GREEN);
+
             } else {
                 txtWin.setVisibility(View.VISIBLE);
                 txtWin.setTextColor(Color.RED);
