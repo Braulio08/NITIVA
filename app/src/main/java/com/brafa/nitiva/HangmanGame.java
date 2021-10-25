@@ -89,6 +89,7 @@ public class HangmanGame extends AppCompatActivity {
 
         numCorr =0;
         oportunidades = "❤❤❤❤❤";
+        txtOportunidades.setText(oportunidades);
 
     }
     public void letterPressed(View view){
