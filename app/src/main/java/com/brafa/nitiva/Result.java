@@ -15,6 +15,7 @@ public class Result extends AppCompatActivity {
     Button exit;
     int puntajeMemory=0;
     int nivelNumbersMemory=0;
+    int puntajeHangman=0;
     String sw = "";
     String userResult;
     @Override
@@ -30,7 +31,7 @@ public class Result extends AppCompatActivity {
 
         puntajeMemory = intent.getIntExtra("puntajeMemory", 0);
         nivelNumbersMemory = intent.getIntExtra("nivelNumber", 0);
-
+        puntajeHangman = intent.getIntExtra("puntajeHangman", 0);
 
         if(puntajeMemory>0){
             sw = "Memory";
@@ -40,6 +41,11 @@ public class Result extends AppCompatActivity {
         if(nivelNumbersMemory>0){
             sw = "NumberMemory";
             userResult = "Nivel: "+ nivelNumbersMemory;
+            result.setText(userResult);
+        }
+        if(puntajeHangman>0){
+            sw = "Hangman";
+            userResult = "Puntaje: "+ puntajeHangman;
             result.setText(userResult);
         }
 
@@ -57,6 +63,11 @@ public class Result extends AppCompatActivity {
                     case "NumberMemory":
                         Intent intent2 = new Intent(Result.this, NumbersMemoryGame.class);
                         startActivity(intent2);
+                        finish();
+                        break;
+                    case "Hangman":
+                        Intent intent3 = new Intent(Result.this, HangmanGame.class);
+                        startActivity(intent3);
                         finish();
                         break;
                 }

@@ -8,10 +8,10 @@
     tools:context=".HangmanGame">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textViewOportunidades"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="❤️❤️❤️❤️❤️️"
+        android:text="❤❤❤❤❤"
         android:textAlignment="center"
         android:textSize="60sp" />
 

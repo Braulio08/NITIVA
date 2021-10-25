@@ -2,6 +2,7 @@ package com.brafa.nitiva;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -26,19 +27,25 @@ public class HangmanGame extends AppCompatActivity {
     private WordAdapter wordAdapter;
     private GridView gridView, wordView;
     ArrayList<String> word = new ArrayList<>();
+    TextView txtOportunidades;
+    int puntaje=0;
     private int numCorr;
+    String oportunidades;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hangman_game);
-        palabras = getResources().getStringArray(R.array.palabras);
+
         palabraLayout = findViewById(R.id.LinearCharts);
-        gridView = findViewById(R.id.screenLetters);
-        wordView = findViewById(R.id.screenWord);
+
+        txtOportunidades = findViewById(R.id.textViewOportunidades);
+        oportunidades = "❤❤❤❤❤";
+        txtOportunidades.setText(oportunidades);
+        puntaje = 0;
         play();
     }
     private void play(){
-
+        palabras = getResources().getStringArray(R.array.palabras);
         String nPalabra = palabras[random.nextInt(palabras.length)];
         while (nPalabra.equals(actual))nPalabra = palabras[random.nextInt(palabras.length)];
 
@@ -67,16 +74,22 @@ public class HangmanGame extends AppCompatActivity {
             palabraLayout.addView(charView[i]);
         }*/
 
-
+        gridView = findViewById(R.id.screenLetters);
+        wordView = findViewById(R.id.screenWord);
 
 
         adapter = new LetterAdapter(this);
+
         gridView.setAdapter(adapter);
 
+
         wordAdapter = new WordAdapter( word, this);
+
         wordView.setAdapter(wordAdapter);
 
         numCorr =0;
+        oportunidades = "❤❤❤❤❤";
+        txtOportunidades.setText(oportunidades);
 
     }
     public void letterPressed(View view){
@@ -89,7 +102,7 @@ public class HangmanGame extends AppCompatActivity {
             if(actual.charAt(i)==letterChar){
                 correct = true;
                 numCorr++;
-
+                puntaje+=10;
                 final int numVisibleChildren = wordView.getChildCount();
                 final int firstVisiblePosition = wordView.getFirstVisiblePosition();
 
@@ -98,16 +111,26 @@ public class HangmanGame extends AppCompatActivity {
 
                     if (positionOfView == i) {
                         View element = wordView.getChildAt(j);
-                        element.setBackgroundResource(R.drawable.buttonshape);
+                        element.setBackgroundResource(R.drawable.charshape);
                     }
                 }
-
-
             }
         }
         if(correct){
             if(numCorr== actual.length()){
-                Toast.makeText(getApplicationContext(),"Bien",Toast.LENGTH_LONG).show();
+                word.clear();
+                play();
+
+            }
+        }else {
+            if(!oportunidades.isEmpty()){
+                oportunidades = oportunidades.substring(0, oportunidades.length()-1);
+                txtOportunidades.setText(oportunidades);
+            }else {
+                Intent intent = new Intent(HangmanGame.this, Result.class);
+                intent.putExtra("puntajeHangman", puntaje);
+                startActivity(intent);
+                finish();
             }
         }
     }
