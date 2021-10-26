@@ -2,6 +2,7 @@ package com.brafa.nitiva;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -14,7 +15,7 @@ import java.util.Random;
 public class TicTacToe extends AppCompatActivity {
 
     TextView txtWin;
-    Button close;
+    Button close, again;
     Integer[] arregloBotones;
     int[] tableroGato = new int[] {
             0, 0, 0,
@@ -34,6 +35,7 @@ public class TicTacToe extends AppCompatActivity {
         setContentView(R.layout.activity_tic_tac_toe);
 
         close = findViewById(R.id.btnClose);
+        again = findViewById(R.id.btnAgain);
         txtWin = findViewById(R.id.txtResult);
         txtWin.setVisibility(View.INVISIBLE);
 
@@ -42,6 +44,24 @@ public class TicTacToe extends AppCompatActivity {
                 R.id.btn4, R.id.btn5, R.id.btn6,
                 R.id.btn7, R.id.btn8, R.id.btn9
         };
+
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TicTacToe.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        again.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TicTacToe.this, TicTacToe.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
 
     public void agregarSimbolo(View vista){
