@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -15,7 +16,7 @@ import java.util.Random;
 public class TicTacToe extends AppCompatActivity {
 
     TextView txtWin;
-    Button close, again;
+    ImageButton close, again;
     Integer[] arregloBotones;
     int[] tableroGato = new int[] {
             0, 0, 0,
@@ -34,8 +35,8 @@ public class TicTacToe extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tic_tac_toe);
 
-        close = findViewById(R.id.btnClose);
-        again = findViewById(R.id.btnAgain);
+        close = findViewById(R.id.imageButtonClose);
+        again = findViewById(R.id.imageButtonAgain);
         txtWin = findViewById(R.id.txtResult);
         txtWin.setVisibility(View.INVISIBLE);
 
