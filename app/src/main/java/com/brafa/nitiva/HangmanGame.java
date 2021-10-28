@@ -8,8 +8,11 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,30 +24,36 @@ public class HangmanGame extends AppCompatActivity {
     private String [] palabras;
     Random random = new Random();
     private String actual;
-    private TextView [] charView;
-    private LinearLayout palabraLayout;
-    private LetterAdapter adapter;
+    ScrollView scrollView;
     private WordAdapter wordAdapter;
-    private GridView gridView, wordView;
+    private GridView wordView;
     ArrayList<String> word = new ArrayList<>();
     TextView txtOportunidades;
     int puntaje=0;
+    GridLayout gridLetters;
     private int numCorr;
     String oportunidades;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hangman_game);
-
-        palabraLayout = findViewById(R.id.LinearCharts);
-
+        scrollView = findViewById(R.id.scrollLetters);
         txtOportunidades = findViewById(R.id.textViewOportunidades);
         oportunidades = "❤❤❤❤❤";
         txtOportunidades.setText(oportunidades);
         puntaje = 0;
+        gridLetters = findViewById(R.id.gridLetters);
         play();
+
+    }
+    private void activarBotones(GridLayout view){
+        for (int i = 0; i < view.getChildCount(); i++) {
+            Button btn = (Button) view.getChildAt(i);
+            btn.setVisibility(View.VISIBLE);
+        }
     }
     private void play(){
+        activarBotones(gridLetters);
         palabras = getResources().getStringArray(R.array.palabras);
         String nPalabra = palabras[random.nextInt(palabras.length)];
         while (nPalabra.equals(actual))nPalabra = palabras[random.nextInt(palabras.length)];
@@ -56,31 +65,9 @@ public class HangmanGame extends AppCompatActivity {
         }
 
 
-        /*String nPalabra = palabras[random.nextInt(palabras.length)];
-        while (nPalabra.equals(actual))nPalabra = palabras[random.nextInt(palabras.length)];
-
-        actual = nPalabra;
-
-        charView = new TextView[actual.length()];
-
-        for (int i = 0; i < actual.length(); i++) {
-            charView[i] = new TextView(this);
-            charView[i].setText(""+actual.charAt(i));
-            charView[i].setLayoutParams(new ViewGroup.LayoutParams(130, ViewGroup.LayoutParams.MATCH_PARENT));
-            charView[i].setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
-            charView[i].setTextColor(Color.BLACK);
-            charView[i].setTextSize(75);
-            charView[i].setBackgroundResource(R.drawable.charshape);
-            palabraLayout.addView(charView[i]);
-        }*/
-
-        gridView = findViewById(R.id.screenLetters);
         wordView = findViewById(R.id.screenWord);
 
 
-        adapter = new LetterAdapter(this);
-
-        gridView.setAdapter(adapter);
 
 
         wordAdapter = new WordAdapter( word, this);
