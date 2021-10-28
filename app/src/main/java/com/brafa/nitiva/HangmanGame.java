@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.GridLayout;
 import android.widget.GridView;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
@@ -25,6 +26,7 @@ public class HangmanGame extends AppCompatActivity {
     Random random = new Random();
     private String actual;
     ScrollView scrollView;
+    ImageButton salir, reiniciar;
     private WordAdapter wordAdapter;
     private GridView wordView;
     ArrayList<String> word = new ArrayList<>();
@@ -44,13 +46,33 @@ public class HangmanGame extends AppCompatActivity {
         puntaje = 0;
         gridLetters = findViewById(R.id.gridLetters);
         play();
-
+        cargarBotones();
     }
     private void activarBotones(GridLayout view){
         for (int i = 0; i < view.getChildCount(); i++) {
             Button btn = (Button) view.getChildAt(i);
             btn.setVisibility(View.VISIBLE);
         }
+    }
+    public void cargarBotones(){
+        salir = findViewById(R.id.imageButtonSalir);
+        reiniciar = findViewById(R.id.imageButtonReiniciar);
+        reiniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                word.clear();
+                puntaje = 0;
+                play();
+            }
+        });
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HangmanGame.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     private void play(){
         activarBotones(gridLetters);
