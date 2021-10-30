@@ -8,8 +8,11 @@ import android.content.Intent;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,17 +20,28 @@ public class MainActivity extends AppCompatActivity {
     ImageButton memory, tictactoe, numberMemory, hangman;
     Button exit;
     Button sound;
-
+    TextView textView;
+    Animation animationButton, animationText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        animationButton = AnimationUtils.loadAnimation(this,R.anim.button_animation);
+        animationText = AnimationUtils.loadAnimation(this,R.anim.text_animation);
         //Activar un botón
         memory = findViewById(R.id.imbMemory); //Buscar el botón en la interfaz
         numberMemory = findViewById(R.id.imbNumberMemory);
         hangman = findViewById(R.id.imbHangman);
         tictactoe = findViewById(R.id.imbTicTacToe);
+        textView = findViewById(R.id.txtTitle);
+
+        textView.setAnimation(animationText);
+        memory.setAnimation(animationButton);
+        numberMemory.setAnimation(animationButton);
+        hangman.setAnimation(animationButton);
+        tictactoe.setAnimation(animationButton);
+
         hangman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
