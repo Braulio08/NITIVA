@@ -14,8 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton memory;
-    Button numberMemory, hangMan, titactoe;
+    ImageButton memory, tictactoe, numberMemory, hangman;
     Button exit;
     Button sound;
 
@@ -26,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Activar un botón
         memory = findViewById(R.id.imbMemory); //Buscar el botón en la interfaz
-        numberMemory = findViewById(R.id.btnNumberMemory);
-        hangMan = findViewById(R.id.btnHangman);
-        titactoe = findViewById(R.id.btnTicTacToe);
-        hangMan.setOnClickListener(new View.OnClickListener() {
+        numberMemory = findViewById(R.id.imbNumberMemory);
+        hangman = findViewById(R.id.imbHangman);
+        tictactoe = findViewById(R.id.imbTicTacToe);
+        hangman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, HangmanGame.class);
@@ -53,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });
-        titactoe.setOnClickListener(new View.OnClickListener() {
+        tictactoe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, TicTacToe.class);
