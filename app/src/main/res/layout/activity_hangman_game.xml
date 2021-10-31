@@ -34,12 +34,20 @@
         android:layout_width="match_parent"
         android:layout_height="388dp">
 
+        <HorizontalScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
         <GridLayout
             android:id="@+id/gridLetters"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:columnCount="4"
-            android:rowCount="7">
+            android:columnCount="7"
+            android:rowCount="4">
 
 
             <Button
@@ -51,7 +59,7 @@
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="A"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button9"
@@ -62,7 +70,7 @@
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="B"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button10"
@@ -73,7 +81,7 @@
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="C"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button11"
@@ -84,261 +92,263 @@
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="D"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="1"
-                android:layout_column="0"
+                android:layout_row="0"
+                android:layout_column="4"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="E"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button13"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="1"
-                android:layout_column="1"
+                android:layout_row="0"
+                android:layout_column="5"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="F"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button14"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="1"
-                android:layout_column="2"
+                android:layout_row="0"
+                android:layout_column="6"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="G"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_row="1"
-                android:layout_column="3"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="H"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="2"
-                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_column="1"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="I"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="2"
-                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_column="2"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="J"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="2"
-                android:layout_column="2"
+                android:layout_row="1"
+                android:layout_column="3"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="N"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="2"
-                android:layout_column="3"
+                android:layout_row="1"
+                android:layout_column="4"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="P"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="3"
-                android:layout_column="0"
+                android:layout_row="1"
+                android:layout_column="5"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="T"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="3"
-                android:layout_column="1"
+                android:layout_row="1"
+                android:layout_column="6"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="X"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="3"
-                android:layout_column="2"
+                android:layout_row="2"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="Ñ"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button23"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="3"
-                android:layout_column="3"
+                android:layout_row="2"
+                android:layout_column="1"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="K"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button24"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="4"
-                android:layout_column="0"
+                android:layout_row="2"
+                android:layout_column="2"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="Q"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="4"
-                android:layout_column="1"
+                android:layout_row="2"
+                android:layout_column="3"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="L"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button26"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="4"
-                android:layout_column="2"
+                android:layout_row="2"
+                android:layout_column="4"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="U"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="4"
-                android:layout_column="3"
+                android:layout_row="2"
+                android:layout_column="5"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="R"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="5"
-                android:layout_column="0"
+                android:layout_row="2"
+                android:layout_column="6"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="M"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button29"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="5"
-                android:layout_column="1"
+                android:layout_row="3"
+                android:layout_column="0"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="V"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button30"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="5"
-                android:layout_column="2"
+                android:layout_row="3"
+                android:layout_column="1"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="O"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="5"
-                android:layout_column="3"
+                android:layout_row="3"
+                android:layout_column="2"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="S"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button32"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="6"
-                android:layout_column="0"
+                android:layout_row="3"
+                android:layout_column="3"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="W"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="6"
-                android:layout_column="1"
+                android:layout_row="3"
+                android:layout_column="4"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="Y"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
 
             <Button
                 android:id="@+id/button34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_row="6"
-                android:layout_column="2"
+                android:layout_row="3"
+                android:layout_column="5"
                 android:layout_columnWeight="1"
                 android:onClick="letterPressed"
                 android:text="Z"
-                android:textSize="48sp" />
+                android:textSize="55sp" />
         </GridLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
     </ScrollView>
 
 
