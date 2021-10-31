@@ -19,7 +19,7 @@
             android:text="❤❤❤❤❤"
             android:textAlignment="center"
             android:textColor="@color/black"
-            android:textSize="60sp" />
+            android:textSize="48sp" />
 
         <GridView
             android:id="@+id/screenWord"
