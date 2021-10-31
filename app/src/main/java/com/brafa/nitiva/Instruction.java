@@ -14,6 +14,7 @@ public class Instruction extends AppCompatActivity {
     ImageButton imageButtonAtras, imageButtonSiguiente;
     TextView txtParrafo;
     private String game="";
+    private String instruccion="";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,8 @@ public class Instruction extends AppCompatActivity {
 
         Intent intent = getIntent();
         game = intent.getStringExtra("game");
+        instruccion = intent.getStringExtra("instruccion");
+        txtParrafo.setText(instruccion);
 
         imageButtonSiguiente.setOnClickListener(new View.OnClickListener() {
             @Override
