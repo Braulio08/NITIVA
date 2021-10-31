@@ -8,8 +8,11 @@ import android.content.Intent;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -17,21 +20,39 @@ public class MainActivity extends AppCompatActivity {
     ImageButton memory, tictactoe, numberMemory, hangman;
     Button exit;
     Button sound;
-
+    TextView textView;
+    Animation animationButton, animationText;
+    private String game="";
+    private String instruccion="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        animationButton = AnimationUtils.loadAnimation(this,R.anim.button_animation);
+        animationText = AnimationUtils.loadAnimation(this,R.anim.text_animation);
         //Activar un botón
         memory = findViewById(R.id.imbMemory); //Buscar el botón en la interfaz
         numberMemory = findViewById(R.id.imbNumberMemory);
         hangman = findViewById(R.id.imbHangman);
         tictactoe = findViewById(R.id.imbTicTacToe);
+        textView = findViewById(R.id.txtTitle);
+
+        textView.setAnimation(animationText);
+        memory.setAnimation(animationButton);
+        numberMemory.setAnimation(animationButton);
+        hangman.setAnimation(animationButton);
+        tictactoe.setAnimation(animationButton);
+
         hangman.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, HangmanGame.class);
+                Intent intent = new Intent(MainActivity.this, Instruction.class);
+                game="Hangman";
+                instruccion="¡Trata de adivinar la palabra presionando las letras de la pantalla!\n" +
+                        "Puedes ver una pista presionando el botón de '?'";
+                intent.putExtra("instruccion", instruccion);
+                intent.putExtra("game", game);
                 startActivity(intent);
                 finish();
             }
@@ -39,7 +60,11 @@ public class MainActivity extends AppCompatActivity {
         numberMemory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, NumbersMemoryGame.class);
+                Intent intent = new Intent(MainActivity.this, Instruction.class);
+                game="NumberMemory";
+                instruccion="¡Memoriza el número que se muestra antes que desaparezca y escríbelo para avanzar de nivel!";
+                intent.putExtra("instruccion", instruccion);
+                intent.putExtra("game", game);
                 startActivity(intent);
                 finish();
             }
@@ -47,7 +72,12 @@ public class MainActivity extends AppCompatActivity {
         memory.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, MemoryGame.class);
+                Intent intent = new Intent(MainActivity.this, Instruction.class);
+                game="Memory";
+                instruccion="¡Pon atención a la posición de las imágenes en la pantalla antes que desaparezcan!\n" +
+                        "Toca las tarjetas para revelar la imagen y buscar en donde se encontraba la pareja";
+                intent.putExtra("instruccion", instruccion);
+                intent.putExtra("game", game);
                 startActivity(intent);
                 finish();
             }
@@ -55,7 +85,12 @@ public class MainActivity extends AppCompatActivity {
         tictactoe.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, TicTacToe.class);
+                Intent intent = new Intent(MainActivity.this, Instruction.class);
+                game="TicTacToe";
+                instruccion="¡Piénsalo con calma!\n" +
+                        "Toca la tarjeta para colocar la 'X' estratégicamente";
+                intent.putExtra("instruccion", instruccion);
+                intent.putExtra("game", game);
                 startActivity(intent);
                 finish();
             }
