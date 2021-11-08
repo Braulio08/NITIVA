@@ -2,9 +2,11 @@ package com.brafa.nitiva;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatDelegate;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.view.View;
@@ -12,14 +14,15 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     ImageButton memory, tictactoe, numberMemory, hangman;
-    Button exit;
-    Button sound;
+    Button exit, sound;
+    Switch switchDayNight;
     TextView textView;
     Animation animationButton, animationText;
     private String game="";
@@ -117,6 +120,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        //setDayNight();
+        //switchDayNight = findViewById(R.id.swtDayNight);
+        //SharedPreferences sp = getSharedPreferences("SP", this.MODE_PRIVATE);
+        //SharedPreferences.Editor editor = sp.edit();
+        //Mantener el estado del switch
+        //int theme = sp.getInt("Theme", 1);
+        //if (theme == 1) {
+        //    switchDayNight.setChecked(false);
+        //} else {
+        //    switchDayNight.setChecked(true);
+        //}
+
+        //switchDayNight.setOnClickListener(new View.OnClickListener() {
+        //    @Override
+        //    public void onClick(View view) {
+        //        if (switchDayNight.isChecked()) {
+        //            editor.putInt("Theme", 0);
+        //        } else {
+        //            editor.putInt("Theme", 1);
+        //        }
+        //        editor.commit();
+        //        setDayNight();
+        //    }
+        //});
     }
 
     private void showDialogMessage() {
@@ -135,5 +163,15 @@ public class MainActivity extends AppCompatActivity {
             }
         }).show();
         alertDialog.create();
+    }
+
+    public void setDayNight() {
+        SharedPreferences sp = getSharedPreferences("SP", this.MODE_PRIVATE);
+        int theme = sp.getInt("Theme", 1);
+        if (theme == 0) {
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+        } else {
+            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
+        }
     }
 }

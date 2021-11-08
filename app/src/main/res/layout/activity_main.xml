@@ -108,7 +108,7 @@
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:text="Salir"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:icon="?attr/actionModeCloseDrawable" />
 
         <Button
@@ -118,7 +118,7 @@
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:text="Sonido"
-            android:textSize="24sp"
+            android:textSize="20sp"
             app:icon="@android:drawable/ic_lock_silent_mode_off"
             tools:ignore="SpeakableTextPresentCheck" />
 
@@ -129,7 +129,7 @@
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:text="?"
-            android:textSize="24sp" />
+            android:textSize="20sp" />
 
     </LinearLayout>
 

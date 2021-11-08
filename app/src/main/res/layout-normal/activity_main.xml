@@ -38,9 +38,9 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="49dp"
-            android:layout_marginTop="43dp"
-            android:layout_marginEnd="86dp"
-            android:layout_marginBottom="117dp"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="87dp"
+            android:layout_marginBottom="1dp"
             android:background="@drawable/buttonhomeshape"
             android:scaleType="fitCenter"
             app:layout_constraintBottom_toTopOf="@+id/imbHangman"
@@ -54,7 +54,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="37dp"
-            android:layout_marginEnd="26dp"
+            android:layout_marginEnd="25dp"
             android:layout_marginBottom="104dp"
             android:background="@drawable/buttonhomeshape"
             android:scaleType="fitCenter"
@@ -69,7 +69,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginStart="41dp"
-            android:layout_marginEnd="88dp"
+            android:layout_marginEnd="89dp"
             android:layout_marginBottom="22dp"
             android:background="@drawable/buttonhomeshape"
             android:scaleType="fitCenter"
@@ -83,7 +83,7 @@
             android:id="@+id/imbTicTacToe"
             android:layout_width="0dp"
             android:layout_height="0dp"
-            android:layout_marginEnd="26dp"
+            android:layout_marginEnd="25dp"
             android:layout_marginBottom="41dp"
             android:background="@drawable/buttonhomeshape"
             android:scaleType="fitCenter"
@@ -104,11 +104,11 @@
         <Button
             android:id="@+id/btnExit"
             android:layout_width="wrap_content"
-            android:layout_height="100dp"
+            android:layout_height="95dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:text="Salir"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:icon="?attr/actionModeCloseDrawable" />
 
         <Button
@@ -118,18 +118,19 @@
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:text="Sonido"
-            android:textSize="24sp"
+            android:textSize="16sp"
             app:icon="@android:drawable/ic_lock_silent_mode_off"
             tools:ignore="SpeakableTextPresentCheck" />
 
-        <Button
+        <ImageButton
             android:id="@+id/btn"
-            android:layout_width="wrap_content"
+            android:layout_width="80dp"
             android:layout_height="100dp"
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
-            android:text="?"
-            android:textSize="24sp" />
+            android:scaleType="fitCenter"
+            android:src="@drawable/interrogatorio"
+            android:textSize="16sp" />
 
     </LinearLayout>
 
