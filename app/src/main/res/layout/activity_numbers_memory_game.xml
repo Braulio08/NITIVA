@@ -48,4 +48,32 @@
         android:layout_height="wrap_content"
         android:text="Revisar"
         android:textSize="48sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/imageButtonSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/angulo_a_la_izquierda" />
+
+        <ImageButton
+            android:id="@+id/imageButtonReiniciar"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/gira_a_la_derecha" />
+
+    </LinearLayout>
 </LinearLayout>

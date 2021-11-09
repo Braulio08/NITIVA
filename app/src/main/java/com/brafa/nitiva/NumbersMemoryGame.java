@@ -8,6 +8,7 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Random;
@@ -17,6 +18,7 @@ public class NumbersMemoryGame extends AppCompatActivity {
     TextView txtLevel, txtNumberShow;
     EditText etAnswer;
     Button btnRevisar;
+    ImageButton salir, reiniciar;
     int nivelActual = 1;
     String rNumber;
     Random random = new Random();
@@ -26,6 +28,26 @@ public class NumbersMemoryGame extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers_memory_game);
         cargarJuego();
+        cargarBotones();
+    }
+    public void cargarBotones(){
+        salir = findViewById(R.id.imageButtonSalir);
+        reiniciar = findViewById(R.id.imageButtonReiniciar);
+        reiniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                nivelActual = 1;
+                cargarJuego();
+            }
+        });
+        salir.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(NumbersMemoryGame.this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
     }
     public void cargarJuego() {
         txtLevel = findViewById(R.id.textViewLevel);
@@ -50,7 +72,7 @@ public class NumbersMemoryGame extends AppCompatActivity {
                 btnRevisar.setVisibility(View.VISIBLE);
                 etAnswer.requestFocus();
             }
-        }, 3000);
+        }, 5000);
 
         btnRevisar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -77,7 +99,7 @@ public class NumbersMemoryGame extends AppCompatActivity {
                             btnRevisar.setVisibility(View.VISIBLE);
                             etAnswer.requestFocus();
                         }
-                    }, 3000);
+                    }, 5000);
                 } else {
                     Intent intent = new Intent(NumbersMemoryGame.this, Result.class);
                     intent.putExtra("nivelNumber", nivelActual);
