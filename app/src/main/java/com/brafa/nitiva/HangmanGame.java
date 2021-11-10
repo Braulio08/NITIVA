@@ -1,14 +1,19 @@
 package com.brafa.nitiva;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.GridLayout;
 import android.widget.GridView;
 import android.widget.ImageButton;
@@ -26,8 +31,9 @@ public class HangmanGame extends AppCompatActivity {
     Random random = new Random();
     private String actual;
     ScrollView scrollView;
-    ImageButton salir, reiniciar;
+    ImageButton salir, reiniciar, btnAsk;
     private WordAdapter wordAdapter;
+    FrameLayout frameLayout;
     private GridView wordView;
     ArrayList<String> word = new ArrayList<>();
     TextView txtOportunidades;
@@ -35,6 +41,7 @@ public class HangmanGame extends AppCompatActivity {
     GridLayout gridLetters;
     private int numCorr;
     String oportunidades;
+    final Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +52,7 @@ public class HangmanGame extends AppCompatActivity {
         txtOportunidades.setText(oportunidades);
         puntaje = 0;
         gridLetters = findViewById(R.id.gridLetters);
+
         play();
         cargarBotones();
     }
@@ -55,6 +63,38 @@ public class HangmanGame extends AppCompatActivity {
         }
     }
     public void cargarBotones(){
+
+
+
+
+
+        frameLayout = findViewById(R.id.frame);
+        btnAsk = findViewById(R.id.btn16);
+        btnAsk.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+
+                frameLayout.setVisibility(View.VISIBLE);
+
+
+
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        frameLayout.setVisibility(View.GONE);
+                    }
+                }, 10000);
+
+            }
+        });
+
+
+
+
+
+
         salir = findViewById(R.id.imageButtonSalir);
         reiniciar = findViewById(R.id.imageButtonReiniciar);
         reiniciar.setOnClickListener(new View.OnClickListener() {
@@ -81,6 +121,16 @@ public class HangmanGame extends AppCompatActivity {
         while (nPalabra.equals(actual))nPalabra = palabras[random.nextInt(palabras.length)];
 
         actual = nPalabra;
+
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        PistaFragment pistaFragment = new PistaFragment();
+        Bundle bundle = new Bundle();
+        String palabra = actual;
+        bundle.putString("palabra", palabra);
+        pistaFragment.setArguments(bundle);
+        fragmentTransaction.add(R.id.frame,pistaFragment);
+        fragmentTransaction.commit();
 
         for (int i = 0; i < actual.length(); i++) {
             word.add(""+actual.charAt(i));
