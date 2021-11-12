@@ -25,7 +25,10 @@ public class PistaFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_pista, container, false);
         pistaResult = view.findViewById(R.id.textViewPista);
         Bundle bundle = getArguments();
-        String palabra = bundle.getString("palabra");
+        String pista = bundle.getString("pista");
+
+        pistaResult.setText(pista);
+
 
 
         return view;

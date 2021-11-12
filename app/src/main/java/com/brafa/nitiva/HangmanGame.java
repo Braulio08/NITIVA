@@ -126,11 +126,148 @@ public class HangmanGame extends AppCompatActivity {
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         PistaFragment pistaFragment = new PistaFragment();
         Bundle bundle = new Bundle();
-        String palabra = actual;
-        bundle.putString("palabra", palabra);
+
+        String pista = "";
+
+        switch (actual)
+        {
+            case "PERRO":
+                pista = "El mejor amigo del hombre.";
+                break;
+            case "GATO":
+                pista = "Son leones en miniatura pero no saben cazar bien.";
+                break;
+            case "PAJARO":
+                pista = "Algunos cantan bonito y son de colores muy llamativos.";
+                break;
+            case "MARIPOSA":
+                pista = "Ama el néctar de las flores y hay de varios colores.";
+                break;
+            case "ARBOL":
+                pista = "Hogar de pájaros y ardillas.";
+                break;
+            case "CASA":
+                pista = "Es bonito llegar despúes de trabajar";
+                break;
+            case "PERSONA":
+                pista = "El mundo está lleno de ellas, cada una única y especial a su manera.";
+                break;
+            case "IGLESIA":
+                pista = "Suenan las campanas todos los domingos.";
+                break;
+            case "PRESIDENTE":
+                pista = "Persona importante que representa al país.";
+                break;
+            case "ESCUELA":
+                pista = "Aquí se hacen los primeros amigos y se aprenden muchas cosas.";
+                break;
+            case "PARQUE":
+                pista = "Lugar pacífico lleno de personas y palomas.";
+                break;
+            case "COMEDOR":
+                pista = "Las personas se reúnen para comer aquí.";
+                break;
+            case "MASCOTA":
+                pista = "Fiel compañero que es parte de la familia.";
+                break;
+            case "INSECTO":
+                pista = "Solo tiene seis patas y es bastante pequeño.";
+                break;
+            case "ESTRELLA":
+                pista = "Se ven miles en las noches de verano.";
+                break;
+            case "JUEGO":
+                pista = "Ideal para pasar un rato de diversión.";
+                break;
+            case "APRENDER":
+                pista = "Todos los días debemos buscar hacerlo.";
+                break;
+            case "TECNOLOGIA":
+                pista = "Maravillosa y avanza cada día.";
+                break;
+            case "CABELLO":
+                pista = "Algunos lo tienen largo, otros corto y algunos... algunos no tienen.";
+                break;
+            case "HOJAS":
+                pista = "Algunas se secan y caen en verano, otras se mantienen verdes.";
+                break;
+            case "EDIFICIO":
+                pista = "Son altos y la ciudad está llena de ellos.";
+                break;
+            case "TELAS":
+                pista = "Hay mucha variedad en colores y material, se pueden cortar para prendas realizar.";
+                break;
+            case "TRAJE":
+                pista = "Vestimenta elegante para eventos importantes.";
+                break;
+            case "VESTIDO":
+                pista = "Se puede usar en fiestas, eventos de gala y hasta para casarse.";
+                break;
+            case "MONTAÑA":
+                pista = "Puedes caminar en ella hasta la cima y tener una gran vista.";
+                break;
+            case "TIBURON":
+                pista = "Nada rápido si su aleta ves en el mar.";
+                break;
+            case "BALLENA":
+                pista = "Es el más grande y majestuoso mamífero acuatico.";
+                break;
+            case "VOLCAN":
+                pista = "Si está activo es bastante reisgoso visitarlo.";
+                break;
+            case "PLAYA":
+                pista = "Ideal para relajarse y tomar el sol.";
+                break;
+            case "BOSQUE":
+                pista = "Lleno de árboles pero cuidado con los animales que te puedas encontrar.";
+                break;
+            case "FUTURO":
+                pista = "Lleno de nuevas historias e incertidumbre.";
+                break;
+            case "PASADO":
+                pista = "Lleno de momorables historias y hermosos recuerdos.";
+                break;
+            case "PRESENTE":
+                pista = "En donde estamos por nuestro pasado y donde podemos definir nuestro futuro.";
+                break;
+            case "REGALO":
+                pista = "Es algo especial que se le entega a una persona querida, algunos están envueltos.";
+                break;
+            case "DORMIR":
+                pista = "Las noches son ideales para esto, aunque en la tarde no está mal tomarse un descanso.";
+                break;
+            case "LIBRO":
+                pista = "Objetos llenos de historias y asombrosas aventuras.";
+                break;
+            case "LAPIZ":
+                pista = "Escribe hasta que se gaste.";
+                break;
+            case "BORRADOR":
+                pista = "Es bastante útil si quieres corregir algo mal escrito.";
+                break;
+            case "COLORES":
+                pista = "Hay miles de ellos y para todos los gustos.";
+                break;
+            case "AMIGOS":
+                pista = "Si tienes pocos no te preocupes, de seguro son de verdad.";
+                break;
+            default:
+                pista = "No se encontró pista";
+                break;
+        }
+
+
+
+        bundle.putString("pista", pista);
         pistaFragment.setArguments(bundle);
         fragmentTransaction.add(R.id.frame,pistaFragment);
         fragmentTransaction.commit();
+
+
+
+
+
+
 
         for (int i = 0; i < actual.length(); i++) {
             word.add(""+actual.charAt(i));

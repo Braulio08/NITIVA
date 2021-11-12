@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:background="@color/purple_200"
     android:orientation="vertical"
+    android:padding="25dp"
     tools:context=".PistaFragment">
 
     <!-- TODO: Update blank fragment layout -->
@@ -20,9 +21,11 @@
         android:id="@+id/textViewPista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/text_pista_shape"
+        android:padding="10dp"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
-        android:textAlignment="viewStart"
-        android:textColor="@color/black"
+        android:textAlignment="center"
+        android:textColor="@color/purple_200"
         android:textSize="48sp" />
 
 </LinearLayout>
