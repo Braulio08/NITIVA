@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
@@ -86,6 +87,7 @@ public class NumbersMemoryGame extends AppCompatActivity {
                     etAnswer.setText("");
 
                     nivelActual++;
+                    Toast.makeText(getApplicationContext(), "Correcto.", Toast.LENGTH_SHORT).show();
                     txtLevel.setText("Nivel: "+ nivelActual);
 
                     rNumber = generarNumeroRandom(nivelActual);
@@ -102,6 +104,7 @@ public class NumbersMemoryGame extends AppCompatActivity {
                     }, 5000);
                 } else {
                     Intent intent = new Intent(NumbersMemoryGame.this, Result.class);
+                    Toast.makeText(getApplicationContext(), "Incorrecto.", Toast.LENGTH_SHORT).show();
                     intent.putExtra("nivelNumber", nivelActual);
                     startActivity(intent);
                     finish();
