@@ -85,7 +85,7 @@ public class HangmanGame extends AppCompatActivity {
                     public void run() {
                         frameLayout.setVisibility(View.GONE);
                     }
-                }, 10000);
+                }, 8000);
 
             }
         });
@@ -314,9 +314,9 @@ public class HangmanGame extends AppCompatActivity {
         }
         if(correct){
             if(numCorr== actual.length()){
+                Toast.makeText(getApplicationContext(), "Correcto.", Toast.LENGTH_SHORT).show();
                 word.clear();
                 play();
-
             }
         }else {
             if(!oportunidades.isEmpty()){
@@ -324,6 +324,7 @@ public class HangmanGame extends AppCompatActivity {
                 txtOportunidades.setText(oportunidades);
             }else {
                 Intent intent = new Intent(HangmanGame.this, Result.class);
+                Toast.makeText(getApplicationContext(), "Incorrecto.", Toast.LENGTH_SHORT).show();
                 intent.putExtra("puntajeHangman", puntaje);
                 startActivity(intent);
                 finish();

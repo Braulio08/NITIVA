@@ -8,47 +8,40 @@
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/buttonshape.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/charshape.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/imageshape.xml" value="0.21614583333333334" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/text_pista_shape.xml" value="0.21614583333333334" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_hangman_game.xml" value="0.1294934640522876" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_instruction.xml" value="0.2" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_main.xml" value="0.1294934640522876" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_memory_game.xml" value="0.1294934640522876" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_numbers_memory_game.xml" value="0.11233660130718955" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_result.xml" value="0.1294934640522876" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_hangman_game.xml" value="0.25" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_instruction.xml" value="0.1641025641025641" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_memory_game.xml" value="0.14356884057971014" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_numbers_memory_game.xml" value="0.12454710144927536" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_result.xml" value="0.14356884057971014" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-small/activity_hangman_game.xml" value="0.5213815789473685" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-small/activity_instruction.xml" value="0.17708333333333334" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_hangman_game.xml" value="0.12454710144927536" />
+        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_hangman_game.xml" value="0.33" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_instruction.xml" value="0.17708333333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_memory.xml" value="0.21" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_memory_game.xml" value="0.1" />
+        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_memory_game.xml" value="0.22" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_numbers_memory_game.xml" value="0.2" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_result.xml" value="0.21" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_result_nums_memory.xml" value="0.2" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_tic_tac_toe.xml" value="0.22447916666666667" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/fragment_pista.xml" value="0.22" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/letter.xml" value="0.67" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/word.xml" value="0.22" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_hangman_game.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_instruction.xml" value="0.153125" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_main.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_memory_game.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_numbers_memory_game.xml" value="0.22" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_tic_tac_toe.xml" value="0.16" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_hangman_game.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_instruction.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_memory_game.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_numbers_memory_game.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_result.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-normal/activity_tic_tac_toe.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout-small/activity_instruction.xml" value="1.4" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_hangman_game.xml" value="0.20102564102564102" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_instruction.xml" value="1.4" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_memory_game.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_numbers_memory_game.xml" value="0.2" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_result.xml" value="0.20102564102564102" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_tic_tac_toe.xml" value="0.25" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_tictactoe.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/layout/fragment_pista.xml" value="0.20416666666666666" />
         <entry key="..\:/Users/FABIAN/AndroidStudioProjects/NITIVA/app/src/main/res/mipmap-anydpi-v26/brain.xml" value="0.2203125" />
       </map>
     </option>
