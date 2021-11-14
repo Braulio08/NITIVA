@@ -2,9 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@color/home"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -14,8 +15,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="NITIVA"
-        android:textColor="@color/black"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="60sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="110dp"
@@ -110,8 +111,10 @@
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:text="Salir"
+            android:textColor="@color/black"
             android:textSize="16sp"
-            app:icon="?attr/actionModeCloseDrawable" />
+            app:icon="?attr/actionModeCloseDrawable"
+            app:iconTint="@color/black" />
 
         <Button
             android:id="@+id/btnSound"
@@ -120,8 +123,10 @@
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:text="Sonido"
+            android:textColor="@color/black"
             android:textSize="16sp"
             app:icon="@android:drawable/ic_lock_silent_mode_off"
+            app:iconTint="@color/black"
             tools:ignore="SpeakableTextPresentCheck" />
 
         <ImageButton
@@ -129,7 +134,7 @@
             android:layout_width="80dp"
             android:layout_height="100dp"
             android:layout_weight="1"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/buttonhomeshape"
             android:scaleType="fitCenter"
             android:src="@drawable/interrogatorio"
             android:textSize="16sp" />

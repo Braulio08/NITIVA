@@ -3,10 +3,12 @@ package com.brafa.nitiva;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,12 +33,15 @@ public class MainActivity extends AppCompatActivity {
     private String game="";
     private String instruccion="";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         animationButton = AnimationUtils.loadAnimation(this,R.anim.button_animation);
         animationText = AnimationUtils.loadAnimation(this,R.anim.text_animation);
+
+
         //Activar un botón
         memory = findViewById(R.id.imbMemory); //Buscar el botón en la interfaz
         numberMemory = findViewById(R.id.imbNumberMemory);
@@ -54,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Instruction.class);
                 game="Hangman";
-                instruccion="¡Trata de adivinar la palabra presionando las letras de la pantalla!\n" +
+                instruccion="¡Trata de adivinar la palabra eligiendo las letras de la pantalla!\n" +
                         "Puedes ver una pista presionando el botón de '?'";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
@@ -67,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Instruction.class);
                 game="NumberMemory";
-                instruccion="¡Memoriza el número que se muestra antes que desaparezca y escríbelo para avanzar de nivel!";
+                instruccion="¡Memoriza el número que se muestra antes de que desaparezca y escríbelo para avanzar de nivel!";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
                 startActivity(intent);
@@ -79,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Instruction.class);
                 game="Memory";
-                instruccion="¡Pon atención a la posición de las imágenes en la pantalla antes que desaparezcan!\n" +
+                instruccion="¡Pon atención a la posición de las imágenes en la pantalla antes de que desaparezcan!\n" +
                         "Toca las tarjetas para revelar la imagen y buscar en donde se encontraba la pareja";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);

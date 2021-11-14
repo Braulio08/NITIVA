@@ -68,6 +68,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="A"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -79,6 +80,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="B"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -90,6 +92,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="C"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -101,6 +104,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="D"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -112,6 +116,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="E"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -123,6 +128,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="F"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -134,6 +140,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="G"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -145,6 +152,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="H"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -156,6 +164,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="I"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -167,6 +176,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="J"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -178,6 +188,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="N"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -189,6 +200,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="P"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -200,6 +212,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="T"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -211,6 +224,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="X"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -222,6 +236,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="Ñ"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -233,6 +248,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="K"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -244,6 +260,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="Q"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -255,6 +272,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="L"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -266,6 +284,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="U"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -277,6 +296,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="R"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -288,6 +308,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="M"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -299,6 +320,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="V"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -310,6 +332,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="O"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -321,6 +344,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="S"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -332,6 +356,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="W"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -343,6 +368,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="Y"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
 
                     <Button
@@ -354,6 +380,7 @@
                         android:layout_columnWeight="1"
                         android:onClick="letterPressed"
                         android:text="Z"
+                        android:textColor="@color/black"
                         android:textSize="55sp" />
                 </GridLayout>
             </LinearLayout>

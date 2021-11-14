@@ -141,11 +141,11 @@ public class TicTacToe extends AppCompatActivity {
         if (estado == 1 || estado == -1) {
             if (estado == 1) {
                 txtWin.setVisibility(View.VISIBLE);
-                txtWin.setTextColor(Color.GREEN);
+                txtWin.setTextColor(Color.rgb(59,98,15));
 
             } else {
                 txtWin.setVisibility(View.VISIBLE);
-                txtWin.setTextColor(Color.RED);
+                txtWin.setTextColor(Color.rgb(98,15,15));
                 simboloGanador = R.drawable.circleblue;
                 txtWin.setText("¡Lo siento, has perdido!");
             }
