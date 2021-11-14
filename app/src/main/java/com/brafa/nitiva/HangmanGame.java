@@ -225,7 +225,7 @@ public class HangmanGame extends AppCompatActivity {
                 pista = "Lleno de nuevas historias e incertidumbre.";
                 break;
             case "PASADO":
-                pista = "Lleno de momorables historias y hermosos recuerdos.";
+                pista = "Lleno de memorables historias y hermosos recuerdos.";
                 break;
             case "PRESENTE":
                 pista = "En donde estamos por nuestro pasado y donde podemos definir nuestro futuro.";

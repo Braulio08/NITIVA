@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#2146FB"
+    android:background="#8a9cfe"
     android:gravity="center|top"
     android:orientation="vertical"
     tools:context=".NumbersMemoryGame">
@@ -21,6 +21,7 @@
             android:layout_weight="1"
             android:text="Nivel: 1"
             android:textAlignment="textStart"
+            android:textColor="@color/black"
             android:textSize="48sp" />
 
     </LinearLayout>
@@ -32,6 +33,7 @@
         android:layout_marginTop="15dp"
         android:text="0000"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="80sp" />
 
     <EditText
@@ -43,6 +45,7 @@
         android:hint="Respuesta"
         android:inputType="number"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="60sp" />
 
     <Button
@@ -51,6 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:text="Revisar"
+        android:textColor="@color/black"
         android:textSize="48sp" />
 
     <LinearLayout

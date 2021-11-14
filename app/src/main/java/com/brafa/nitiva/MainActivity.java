@@ -3,10 +3,12 @@ package com.brafa.nitiva;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
+import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
@@ -15,6 +17,7 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,12 +33,15 @@ public class MainActivity extends AppCompatActivity {
     private String game="";
     private String instruccion="";
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         animationButton = AnimationUtils.loadAnimation(this,R.anim.button_animation);
         animationText = AnimationUtils.loadAnimation(this,R.anim.text_animation);
+
+
         //Activar un botón
         memory = findViewById(R.id.imbMemory); //Buscar el botón en la interfaz
         numberMemory = findViewById(R.id.imbNumberMemory);

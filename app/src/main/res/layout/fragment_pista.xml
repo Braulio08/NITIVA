@@ -16,16 +16,20 @@
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="60sp" />
+<ScrollView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/text_pista_shape">
 
     <TextView
         android:id="@+id/textViewPista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/text_pista_shape"
+
         android:padding="10dp"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
         android:textAlignment="center"
         android:textColor="@color/purple_200"
-        android:textSize="48sp" />
-
+        android:textSize="40sp" />
+</ScrollView>
 </LinearLayout>
