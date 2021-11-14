@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Instruction.class);
                 game="Hangman";
-                instruccion="¡Trata de adivinar la palabra presionando las letras de la pantalla!\n" +
+                instruccion="¡Trata de adivinar la palabra eligiendo las letras de la pantalla!\n" +
                         "Puedes ver una pista presionando el botón de '?'";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
@@ -67,7 +67,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Instruction.class);
                 game="NumberMemory";
-                instruccion="¡Memoriza el número que se muestra antes que desaparezca y escríbelo para avanzar de nivel!";
+                instruccion="¡Memoriza el número que se muestra antes de que desaparezca y escríbelo para avanzar de nivel!";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
                 startActivity(intent);
@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Instruction.class);
                 game="Memory";
-                instruccion="¡Pon atención a la posición de las imágenes en la pantalla antes que desaparezcan!\n" +
+                instruccion="¡Pon atención a la posición de las imágenes en la pantalla antes de que desaparezcan!\n" +
                         "Toca las tarjetas para revelar la imagen y buscar en donde se encontraba la pareja";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
