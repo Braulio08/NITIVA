@@ -24,7 +24,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageButton memory, tictactoe, numberMemory, hangman;
+    ImageButton memory, tictactoe, numberMemory, hangman, about;
     Button exit, sound;
     Switch switchDayNight;
     TextView textView;
@@ -49,11 +49,21 @@ public class MainActivity extends AppCompatActivity {
         tictactoe = findViewById(R.id.imbTicTacToe);
         textView = findViewById(R.id.txtTitle);
 
+        about = findViewById(R.id.btn);
         textView.setAnimation(animationText);
         memory.setAnimation(animationButton);
         numberMemory.setAnimation(animationButton);
         hangman.setAnimation(animationButton);
         tictactoe.setAnimation(animationButton);
+
+        about.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, About.class);
+                startActivity(intent);
+                finish();
+            }
+        });
 
         hangman.setOnClickListener(new View.OnClickListener() {
             @Override
