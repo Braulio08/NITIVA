@@ -9,6 +9,13 @@
     android:orientation="vertical"
     tools:context=".About">
 
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentContainerView"
+        android:name="com.brafa.nitiva.AcercaDeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="493dp"
+        android:visibility="gone" />
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cvAcercaDe"
         android:layout_width="match_parent"
