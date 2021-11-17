@@ -2,4 +2,9 @@
     <string name="app_name">NITIVA</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="alzheimer">El Alzheimer, es la más común de las demencias, es progresiva y con el paso de los años empeora.
+        Forma parte de un grupo de enfermedades degenerativas que afectan al cerebro directamente, afectando principalmente
+        a la memoria seguido del pensamiento, la conducta y las emociones.</string>
+    <string name="proyecto">Esta aplicación está enfocada en la estimulación cognitiva de la persona adulta mayor, con el fin
+        de aportar ejercicios mentales para mantener activa la memoria y a su vez estableciendo una opción de entretenimiento sano.</string>
 </resources>
