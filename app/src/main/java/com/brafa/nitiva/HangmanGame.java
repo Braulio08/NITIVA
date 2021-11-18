@@ -70,12 +70,10 @@ public class HangmanGame extends AppCompatActivity {
 
         frameLayout = findViewById(R.id.frame);
         btnAsk = findViewById(R.id.btn16);
+
         btnAsk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-
-
                 frameLayout.setVisibility(View.VISIBLE);
 
 
