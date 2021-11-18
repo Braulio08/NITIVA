@@ -6,6 +6,7 @@
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable-hdpi/gradient_center.xml" value="0.2128205128205128" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable-hdpi/gradient_end.xml" value="0.2128205128205128" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable-xxhdpi/charshape2.xml" value="0.21614583333333334" />
+        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/background_toast.xml" value="0.20092592592592592" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/buttonhomeshape.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/buttonshape.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/charshape.xml" value="0.21614583333333334" />
@@ -14,7 +15,7 @@
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/ic_launcher_background.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/imageshape.xml" value="0.21614583333333334" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/drawable/text_pista_shape.xml" value="0.21614583333333334" />
-        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_about.xml" value="0.1" />
+        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_about.xml" value="0.2" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_hangman_game.xml" value="0.2" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_instruction.xml" value="0.16094771241830066" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout-large/activity_main.xml" value="0.1" />
@@ -40,6 +41,7 @@
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_result.xml" value="0.21" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_result_nums_memory.xml" value="0.2" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/activity_tic_tac_toe.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/custom_toast.xml" value="0.2" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/fragment_acerca_de.xml" value="0.2" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/fragment_alzheimer.xml" value="0.2" />
         <entry key="..\:/Users/BRAULIO/AndroidStudioProjects/NITIVA/app/src/main/res/layout/fragment_blank.xml" value="0.2" />
