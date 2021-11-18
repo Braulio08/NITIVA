@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -18,6 +19,7 @@ public class TicTacToe extends AppCompatActivity {
     TextView txtWin;
     ImageButton close, again;
     Integer[] arregloBotones;
+    final Handler handler = new Handler();
     int[] tableroGato = new int[] {
             0, 0, 0,
             0, 0, 0,
@@ -79,7 +81,18 @@ public class TicTacToe extends AppCompatActivity {
                 terminarPartida();
 
                 if (estado == 0) {
-                    simularIA();
+
+
+
+
+                    handler.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            simularIA();
+                        }
+                    }, 1000);
+
+
                     espaciosUsados += 1;
                     turno = -1;
                     estado = comprobarEstado();

@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7A6A6"
+    android:orientation="vertical"
+    tools:context=".MemoryGame">
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="Puntaje:"
+            android:textColor="@color/black"
+            android:textSize="60sp" />
+
+        <TextView
+            android:id="@+id/textViewPuntaje"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/black"
+            android:textSize="60sp" />
+
+    </LinearLayout>
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:columnCount="3"
+        android:rowCount="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6">
+
+        <ImageButton
+            android:id="@+id/btn00"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn01"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn02"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn03"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn04"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn05"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn06"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn07"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn08"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn09"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="3"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn10"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+        <ImageButton
+            android:id="@+id/btn11"
+            android:layout_width="100dp"
+            android:layout_height="150dp"
+            android:layout_row="3"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/imageshape"
+            android:hapticFeedbackEnabled="false" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageButton
+            android:id="@+id/imageButtonSalir"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/angulo_a_la_izquierda" />
+
+        <ImageButton
+            android:id="@+id/imageButtonReiniciar"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/gira_a_la_derecha" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
