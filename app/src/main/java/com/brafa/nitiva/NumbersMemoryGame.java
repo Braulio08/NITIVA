@@ -65,8 +65,8 @@ public class NumbersMemoryGame extends AppCompatActivity {
         toast.setView(view);
 
         LayoutInflater layoutInflater2 = getLayoutInflater();
-        View view2 = layoutInflater2.inflate(R.layout.custom_toast2, (ViewGroup) findViewById(R.id.toast2));
-        TextView textView2 = view.findViewById(R.id.textView8);
+        View view2 = layoutInflater2.inflate(R.layout.custom2_toast, (ViewGroup) findViewById(R.id.toast2));
+        TextView textView2 = view2.findViewById(R.id.textView8);
         textView2.setText("¡Ups!");
         final Toast toast2 = new Toast(getApplicationContext());
         toast2.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
