@@ -10,6 +10,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -312,7 +313,15 @@ public class HangmanGame extends AppCompatActivity {
         }
         if(correct){
             if(numCorr== actual.length()){
-                Toast.makeText(getApplicationContext(), "Correcto.", Toast.LENGTH_SHORT).show();
+                LayoutInflater layoutInflater2 = getLayoutInflater();
+                View view2 = layoutInflater2.inflate(R.layout.custom2_toast, (ViewGroup) findViewById(R.id.toast2));
+                TextView textView2 = view2.findViewById(R.id.textView8);
+                textView2.setText(actual);
+                final Toast toast2 = new Toast(getApplicationContext());
+                toast2.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+                toast2.setDuration(Toast.LENGTH_SHORT);
+                toast2.setView(view2);
+                toast2.show();
                 word.clear();
                 play();
             }
@@ -320,9 +329,9 @@ public class HangmanGame extends AppCompatActivity {
             if(!oportunidades.isEmpty()){
                 oportunidades = oportunidades.substring(0, oportunidades.length()-1);
                 txtOportunidades.setText(oportunidades);
+
             }else {
                 Intent intent = new Intent(HangmanGame.this, Result.class);
-                Toast.makeText(getApplicationContext(), "Incorrecto.", Toast.LENGTH_SHORT).show();
                 intent.putExtra("puntajeHangman", puntaje);
                 startActivity(intent);
                 finish();

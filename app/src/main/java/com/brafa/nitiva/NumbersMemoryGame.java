@@ -5,7 +5,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -51,6 +54,29 @@ public class NumbersMemoryGame extends AppCompatActivity {
         });
     }
     public void cargarJuego() {
+
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view = layoutInflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.toast1));
+        TextView textView = view.findViewById(R.id.textView8);
+        textView.setText("¡Correcto!");
+        final Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(view);
+
+        LayoutInflater layoutInflater2 = getLayoutInflater();
+        View view2 = layoutInflater2.inflate(R.layout.custom2_toast, (ViewGroup) findViewById(R.id.toast2));
+        TextView textView2 = view2.findViewById(R.id.textView8);
+        textView2.setText("¡Ups!");
+        final Toast toast2 = new Toast(getApplicationContext());
+        toast2.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast2.setDuration(Toast.LENGTH_SHORT);
+        toast2.setView(view2);
+
+
+
+
+
         txtLevel = findViewById(R.id.textViewLevel);
         txtNumberShow = findViewById(R.id.textViewNumberShow);
         etAnswer = findViewById(R.id.editTextNumber);
@@ -87,7 +113,8 @@ public class NumbersMemoryGame extends AppCompatActivity {
                     etAnswer.setText("");
 
                     nivelActual++;
-                    Toast.makeText(getApplicationContext(), "Correcto.", Toast.LENGTH_SHORT).show();
+
+                    toast.show();
                     txtLevel.setText("Nivel: "+ nivelActual);
 
                     rNumber = generarNumeroRandom(nivelActual);
@@ -104,7 +131,7 @@ public class NumbersMemoryGame extends AppCompatActivity {
                     }, 5000);
                 } else {
                     Intent intent = new Intent(NumbersMemoryGame.this, Result.class);
-                    Toast.makeText(getApplicationContext(), "Incorrecto.", Toast.LENGTH_SHORT).show();
+                    toast2.show();
                     intent.putExtra("nivelNumber", nivelActual);
                     startActivity(intent);
                     finish();
