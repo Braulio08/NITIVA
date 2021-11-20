@@ -12,6 +12,7 @@ import android.graphics.drawable.AnimationDrawable;
 import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -22,6 +23,8 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
 
     ImageButton memory, tictactoe, numberMemory, hangman, about;
@@ -30,8 +33,10 @@ public class MainActivity extends AppCompatActivity {
     TextView textView;
     Animation animationButton, animationText;
     MediaPlayer mediaPlayer;
+    Integer count = 0;
     private String game="";
     private String instruccion="";
+    boolean status = false;
 
 
     @Override
@@ -40,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         animationButton = AnimationUtils.loadAnimation(this,R.anim.button_animation);
         animationText = AnimationUtils.loadAnimation(this,R.anim.text_animation);
-
 
         //Activar un botón
         memory = findViewById(R.id.imbMemory); //Buscar el botón en la interfaz
@@ -125,45 +129,49 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        sound = findViewById(R.id.btnSound);
+    }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.adaytoremember);
+        mediaPlayer.start();
+
+        sound = findViewById(R.id.btnSound);
         sound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (true){
-
+                if (!status){
+                    mediaPlayer.setVolume(0, 0);
                     Toast.makeText(getApplicationContext(), "Has desactivado el sonido.", Toast.LENGTH_LONG).show();
+                    status = true;
                 } else {
-
+                    mediaPlayer.setVolume(1, 1);
                     Toast.makeText(getApplicationContext(), "Has activado el sonido.", Toast.LENGTH_LONG).show();
+                    status = false;
                 }
             }
         });
+    }
 
-        //setDayNight();
-        //switchDayNight = findViewById(R.id.swtDayNight);
-        //SharedPreferences sp = getSharedPreferences("SP", this.MODE_PRIVATE);
-        //SharedPreferences.Editor editor = sp.edit();
-        //Mantener el estado del switch
-        //int theme = sp.getInt("Theme", 1);
-        //if (theme == 1) {
-        //    switchDayNight.setChecked(false);
-        //} else {
-        //    switchDayNight.setChecked(true);
-        //}
+    @Override
+    protected void onPause() {
+        super.onPause();
 
-        //switchDayNight.setOnClickListener(new View.OnClickListener() {
-        //    @Override
-        //    public void onClick(View view) {
-        //        if (switchDayNight.isChecked()) {
-        //            editor.putInt("Theme", 0);
-        //        } else {
-        //            editor.putInt("Theme", 1);
-        //        }
-        //        editor.commit();
-        //        setDayNight();
-        //    }
-        //});
+        if (!status){
+            mediaPlayer.setVolume(0, 0);
+            status = true;
+        } else {
+            mediaPlayer.setVolume(1, 1);
+            status = false;
+        }
+    }
+
+    @Override
+    protected void onDestroy() {
+        mediaPlayer.stop();
+        super.onDestroy();
     }
 
     private void showDialogMessage() {
@@ -173,6 +181,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 dialogInterface.cancel();
+
             }
         })
         .setPositiveButton("Sí", new DialogInterface.OnClickListener() {
@@ -182,15 +191,5 @@ public class MainActivity extends AppCompatActivity {
             }
         }).show();
         alertDialog.create();
-    }
-
-    public void setDayNight() {
-        SharedPreferences sp = getSharedPreferences("SP", this.MODE_PRIVATE);
-        int theme = sp.getInt("Theme", 1);
-        if (theme == 0) {
-            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_YES);
-        } else {
-            getDelegate().setLocalNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        }
     }
 }
