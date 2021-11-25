@@ -250,6 +250,21 @@ public class HangmanGame extends AppCompatActivity {
             case "AMIGOS":
                 pista = "Si tienes pocos no te preocupes, de seguro son de verdad.";
                 break;
+            case "AHINCO":
+                pista = "Se debe poner en práctica si se desea algo con fuerza.";
+                break;
+            case "HAZAÑA":
+                pista = "Resultado de un gran valor y esfuerzo.";
+                break;
+            case "HEGEMONIA":
+                pista = "Cuando un estado tiene poder sobre otro.";
+                break;
+            case "EPIFANIA":
+                pista = "Es una manifestación magnífica.";
+                break;
+            case "INTRANSIGENTE":
+                pista = "Se mantiene firme y no cambiará su postura.";
+                break;
             default:
                 pista = "No se encontró pista";
                 break;
