@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.View;
 import android.widget.ImageButton;
@@ -20,7 +21,7 @@ public class MemoryGame extends AppCompatActivity {
     ImageButton imb00, imb01, imb02, imb03, imb04, imb05, imb06, imb07, imb08, imb09, imb10, imb11;
     ImageButton[] matriz = new ImageButton[12];
     ImageButton salir, reiniciar;
-    TextView puntajePantalla;
+    TextView puntajePantalla, textViewTemp;
     int puntaje = 0;
     int aciertos = 0;
     int[] imagenes;
@@ -37,10 +38,16 @@ public class MemoryGame extends AppCompatActivity {
     boolean bandera = false;
     final Handler handler = new Handler();
 
+    CountDownTimer countDownTimer;
+    private static final long TOTAL_TIME = 6000;
+    Boolean timerContinue;
+    long timeLeft = TOTAL_TIME;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_memory_game);
+        startTimer();
         iniciar();
     }
     private void cargarMatriz(){
@@ -74,6 +81,7 @@ public class MemoryGame extends AppCompatActivity {
     }
     public void cargarTexto(){
         puntajePantalla = findViewById(R.id.textViewPuntaje);
+        textViewTemp = findViewById(R.id.textViewTemp);
         puntaje=0;
         aciertos=0;
         puntajePantalla.setText(""+puntaje);
@@ -127,6 +135,9 @@ public class MemoryGame extends AppCompatActivity {
         reiniciar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                pauseTimer();
+                resetTimer();
+                startTimer();
                 iniciar();
             }
         });
@@ -147,11 +158,53 @@ public class MemoryGame extends AppCompatActivity {
         Collections.shuffle(result);
         return result;
     }
+
+
+    public void resetTimer()
+    {
+        timeLeft = TOTAL_TIME;
+        updateCountDownText();
+    }
+    public void updateCountDownText()
+    {
+        int second = (int)(timeLeft / 1000) % 60;
+        textViewTemp.setText(""+second);
+    }
+    public void pauseTimer()
+    {
+        countDownTimer.cancel();
+        timerContinue = false;
+    }
+
+    public void startTimer(){
+        countDownTimer = new CountDownTimer(timeLeft, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeft = millisUntilFinished;
+                updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() {
+                timerContinue = false;
+                pauseTimer();
+                textViewTemp.setVisibility(View.INVISIBLE);
+                for (int i = 0; i < matriz.length; i++) {
+                    matriz[i].setScaleType(ImageView.ScaleType.FIT_CENTER);
+                    matriz[i].setImageResource(fondo);
+                }
+
+            }
+        }.start();
+        timerContinue = true;
+    }
+
     public void iniciar(){
         cargarMatriz();
         cargarBotones();
         cargarTexto();
         cargarImagenes();
+        textViewTemp.setVisibility(View.VISIBLE);
         arrayCaos = barajar(imagenes.length);
         numberRandom = random.nextInt(5);
         for (int i = 0; i < matriz.length; i++) {
@@ -175,7 +228,7 @@ public class MemoryGame extends AppCompatActivity {
             }
         }
 
-        handler.postDelayed(new Runnable() {
+        /*handler.postDelayed(new Runnable() {
             @Override
             public void run() {
                 for (int i = 0; i < matriz.length; i++) {
@@ -183,7 +236,13 @@ public class MemoryGame extends AppCompatActivity {
                     matriz[i].setImageResource(fondo);
                 }
             }
-        }, 4000);
+        }, 5000);*/
+
+
+        //Aquí va
+
+
+
         for (int i = 0; i < matriz.length; i++) {
             final int j = i;
             matriz[i].setEnabled(true);
