@@ -65,7 +65,7 @@
 
         <ImageButton
             android:id="@+id/imageButtonSalir"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="5dp"
             android:layout_weight="1"
@@ -73,9 +73,20 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/angulo_a_la_izquierda" />
 
+        <TextView
+            android:id="@+id/textViewTemp"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:text="0"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="80sp" />
+
         <ImageButton
             android:id="@+id/imageButtonReiniciar"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_margin="5dp"
             android:layout_weight="1"

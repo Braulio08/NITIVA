@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.Gravity;
 import android.view.LayoutInflater;
@@ -19,7 +20,7 @@ import java.util.Random;
 
 public class NumbersMemoryGame extends AppCompatActivity {
 
-    TextView txtLevel, txtNumberShow;
+    TextView txtLevel, txtNumberShow, textViewTemp;
     EditText etAnswer;
     Button btnRevisar;
     ImageButton salir, reiniciar;
@@ -27,10 +28,15 @@ public class NumbersMemoryGame extends AppCompatActivity {
     String rNumber;
     Random random = new Random();
     final Handler handler = new Handler();
+    CountDownTimer countDownTimer;
+    private static final long TOTAL_TIME = 6000;
+    Boolean timerContinue;
+    long timeLeft = TOTAL_TIME;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers_memory_game);
+        startTimer();
         cargarJuego();
         cargarBotones();
     }
@@ -41,6 +47,9 @@ public class NumbersMemoryGame extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 nivelActual = 1;
+                pauseTimer();
+                resetTimer();
+                startTimer();
                 cargarJuego();
             }
         });
@@ -53,6 +62,46 @@ public class NumbersMemoryGame extends AppCompatActivity {
             }
         });
     }
+
+    public void startTimer()
+    {
+        countDownTimer = new CountDownTimer(timeLeft, 1000) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                timeLeft = millisUntilFinished;
+                updateCountDownText();
+            }
+
+            @Override
+            public void onFinish() {
+                timerContinue = false;
+                pauseTimer();
+                textViewTemp.setVisibility(View.INVISIBLE);
+
+                txtNumberShow.setVisibility(View.GONE);
+                etAnswer.setVisibility(View.VISIBLE);
+                btnRevisar.setVisibility(View.VISIBLE);
+                etAnswer.requestFocus();
+            }
+        }.start();
+        timerContinue = true;
+    }
+    public void resetTimer()
+    {
+        timeLeft = TOTAL_TIME;
+        updateCountDownText();
+    }
+    public void updateCountDownText()
+    {
+        int second = (int)(timeLeft / 1000) % 60;
+        textViewTemp.setText(""+second);
+    }
+    public void pauseTimer()
+    {
+        countDownTimer.cancel();
+        timerContinue = false;
+    }
+
     public void cargarJuego() {
 
         LayoutInflater layoutInflater = getLayoutInflater();
@@ -81,32 +130,42 @@ public class NumbersMemoryGame extends AppCompatActivity {
         txtNumberShow = findViewById(R.id.textViewNumberShow);
         etAnswer = findViewById(R.id.editTextNumber);
         btnRevisar = findViewById(R.id.btnRevisar);
+        textViewTemp = findViewById(R.id.textViewTemp);
 
+
+        textViewTemp.setVisibility(View.VISIBLE);
         txtNumberShow.setVisibility(View.VISIBLE);
         etAnswer.setVisibility(View.GONE);
         btnRevisar.setVisibility(View.GONE);
+
 
         txtLevel.setText("Nivel: "+ nivelActual);
         rNumber = generarNumeroRandom(nivelActual);
         txtNumberShow.setText(rNumber);
 
 
-        handler.postDelayed(new Runnable() {
+       /* handler.postDelayed(new Runnable() {
             @Override
             public void run() {
+                textViewTemp.setVisibility(View.INVISIBLE);
+
                 txtNumberShow.setVisibility(View.GONE);
                 etAnswer.setVisibility(View.VISIBLE);
                 btnRevisar.setVisibility(View.VISIBLE);
                 etAnswer.requestFocus();
             }
-        }, 5000);
+        }, 6000);*/
 
         btnRevisar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (rNumber.equals(etAnswer.getText().toString())){
 
+                    resetTimer();
+                    startTimer();
+                    textViewTemp.setVisibility(View.VISIBLE);
                     txtNumberShow.setVisibility(View.VISIBLE);
+
                     etAnswer.setVisibility(View.GONE);
                     btnRevisar.setVisibility(View.GONE);
 
@@ -120,15 +179,17 @@ public class NumbersMemoryGame extends AppCompatActivity {
                     rNumber = generarNumeroRandom(nivelActual);
                     txtNumberShow.setText(rNumber);
 
-                    handler.postDelayed(new Runnable() {
+                   /* handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
+                            textViewTemp.setVisibility(View.INVISIBLE);
+
                             txtNumberShow.setVisibility(View.GONE);
                             etAnswer.setVisibility(View.VISIBLE);
                             btnRevisar.setVisibility(View.VISIBLE);
                             etAnswer.requestFocus();
                         }
-                    }, 5000);
+                    }, 6000);*/
                 } else {
                     Intent intent = new Intent(NumbersMemoryGame.this, Result.class);
                     toast2.show();
