@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, Instruction.class);
                 game="Memory";
                 instruccion="¡Pon atención a la posición de las imágenes en la pantalla antes de que desaparezcan!\n" +
-                        "Toca las tarjetas para revelar la imagen y buscar en donde se encontraba la pareja";
+                        "Toca las tarjetas para revelar la imagen y encontrar su respectiva pareja";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
                 startActivity(intent);
