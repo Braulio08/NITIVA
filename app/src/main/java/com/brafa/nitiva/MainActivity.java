@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, Instruction.class);
                 game="NumberMemory";
-                instruccion="¡Memoriza el número que se muestra antes de que desaparezca y escríbelo para avanzar de nivel!";
+                instruccion="¡Memoriza el número antes de que desaparezca y escríbelo para avanzar de nivel!";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
                 startActivity(intent);
