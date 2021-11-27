@@ -183,22 +183,22 @@ public class HangmanGame extends AppCompatActivity {
                 pista = "El mejor amigo del hombre.";
                 break;
             case "GATO":
-                pista = "Son leones en miniatura pero no saben cazar bien.";
+                pista = "Son leones en miniatura, pero no saben cazar bien.";
                 break;
             case "PAJARO":
                 pista = "Algunos cantan bonito y son de colores muy llamativos.";
                 break;
             case "MARIPOSA":
-                pista = "Ama el néctar de las flores y hay de varios colores.";
+                pista = "Aman el néctar de las flores y hay de varios colores.";
                 break;
             case "ARBOL":
                 pista = "Hogar de pájaros y ardillas.";
                 break;
             case "CASA":
-                pista = "Es bonito llegar despúes de trabajar";
+                pista = "Es bonito llegar después de trabajar";
                 break;
             case "PERSONA":
-                pista = "El mundo está lleno de ellas, cada una única y especial a su manera.";
+                pista = "El mundo está lleno de ellas, cada una es única y especial a su manera.";
                 break;
             case "IGLESIA":
                 pista = "Suenan las campanas todos los domingos.";
@@ -207,7 +207,7 @@ public class HangmanGame extends AppCompatActivity {
                 pista = "Persona importante que representa al país.";
                 break;
             case "ESCUELA":
-                pista = "Aquí se hacen los primeros amigos y se aprenden muchas cosas.";
+                pista = "Aquí se hacen los primeros amigos y se adquieren conocimientos.";
                 break;
             case "PARQUE":
                 pista = "Lugar pacífico lleno de personas y palomas.";
@@ -219,19 +219,19 @@ public class HangmanGame extends AppCompatActivity {
                 pista = "Fiel compañero que es parte de la familia.";
                 break;
             case "INSECTO":
-                pista = "Solo tiene seis patas y es bastante pequeño.";
+                pista = "Tiene seis patas y es bastante pequeño.";
                 break;
             case "ESTRELLA":
-                pista = "Se ven miles en las noches de verano.";
+                pista = "Se observan miles en las noches de verano.";
                 break;
             case "JUEGO":
                 pista = "Ideal para pasar un rato de diversión.";
                 break;
             case "APRENDER":
-                pista = "Todos los días debemos buscar hacerlo.";
+                pista = "Tomar conocimientos nuevos.";
                 break;
             case "TECNOLOGIA":
-                pista = "Maravillosa y avanza cada día.";
+                pista = "Novedosa y avanza cada día.";
                 break;
             case "CABELLO":
                 pista = "Algunos lo tienen largo, otros corto y algunos... algunos no tienen.";
@@ -243,28 +243,28 @@ public class HangmanGame extends AppCompatActivity {
                 pista = "Son altos y la ciudad está llena de ellos.";
                 break;
             case "TELAS":
-                pista = "Hay mucha variedad en colores y material, se pueden cortar para prendas realizar.";
+                pista = "Hay mucha variedad en colores y texturas, se pueden cortar para fabricar prendas.";
                 break;
             case "TRAJE":
-                pista = "Vestimenta elegante para eventos importantes.";
+                pista = "Vestimenta elegante para eventos exclusivos.";
                 break;
             case "VESTIDO":
                 pista = "Se puede usar en fiestas, eventos de gala y hasta para casarse.";
                 break;
             case "MONTAÑA":
-                pista = "Puedes caminar en ella hasta la cima y tener una gran vista.";
+                pista = "Puedes escalar en ella hasta la cima y tener una gran vista.";
                 break;
             case "TIBURON":
                 pista = "Nada rápido si su aleta ves en el mar.";
                 break;
             case "BALLENA":
-                pista = "Es el más grande y majestuoso mamífero acuatico.";
+                pista = "Es el más grande y majestuoso mamífero acuático.";
                 break;
             case "VOLCAN":
-                pista = "Si está activo es bastante reisgoso visitarlo.";
+                pista = "Si está activo es bastante riesgoso visitarlo.";
                 break;
             case "PLAYA":
-                pista = "Ideal para relajarse y tomar el sol.";
+                pista = "Un poco de agua salada ideal para relajarse y tomar el sol.";
                 break;
             case "BOSQUE":
                 pista = "Lleno de árboles pero cuidado con los animales que te puedas encontrar.";
@@ -279,13 +279,13 @@ public class HangmanGame extends AppCompatActivity {
                 pista = "En donde estamos por nuestro pasado y donde podemos definir nuestro futuro.";
                 break;
             case "REGALO":
-                pista = "Es algo especial que se le entega a una persona querida, algunos están envueltos.";
+                pista = "Es algo especial que se le entrega a una persona querida, algunos están envueltos.";
                 break;
             case "DORMIR":
-                pista = "Las noches son ideales para esto, aunque en la tarde no está mal tomarse un descanso.";
+                pista = "Las noches son ideales para esto, sin embargo en la tarde no está mal tomarse un descanso.";
                 break;
             case "LIBRO":
-                pista = "Objetos llenos de historias y asombrosas aventuras.";
+                pista = "Portal de papel que te dirige a otros lugares.";
                 break;
             case "LAPIZ":
                 pista = "Escribe hasta que se gaste.";
@@ -294,7 +294,7 @@ public class HangmanGame extends AppCompatActivity {
                 pista = "Es bastante útil si quieres corregir algo mal escrito.";
                 break;
             case "COLORES":
-                pista = "Hay miles de ellos y para todos los gustos.";
+                pista = "El arcoíris está vestido de ellos.";
                 break;
             case "AMIGOS":
                 pista = "Si tienes pocos no te preocupes, de seguro son de verdad.";
@@ -318,6 +318,7 @@ public class HangmanGame extends AppCompatActivity {
                 pista = "No se encontró pista";
                 break;
         }
+
 
 
 
