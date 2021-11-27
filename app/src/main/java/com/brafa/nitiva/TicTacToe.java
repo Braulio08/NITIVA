@@ -4,12 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -17,8 +19,11 @@ import java.util.Random;
 public class TicTacToe extends AppCompatActivity {
 
     TextView txtWin;
+    Button sound;
     ImageButton close, again;
     Integer[] arregloBotones;
+    MediaPlayer mediaPlayer;
+    boolean status = false;
     final Handler handler = new Handler();
     int[] tableroGato = new int[] {
             0, 0, 0,
@@ -67,6 +72,53 @@ public class TicTacToe extends AppCompatActivity {
         });
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        //if  (status == false) {
+            mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.tictactoe);
+            mediaPlayer.start();
+        //    status = true;
+        //}
+
+        /*sound = findViewById(R.id.btnSound);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (!status){
+                    mediaPlayer.setVolume(0, 0);
+                    Toast.makeText(getApplicationContext(), "Has desactivado el sonido.", Toast.LENGTH_LONG).show();
+                    status = true;
+                } else {
+                    mediaPlayer.setVolume(1, 1);
+                    Toast.makeText(getApplicationContext(), "Has activado el sonido.", Toast.LENGTH_LONG).show();
+                    status = false;
+                }
+            }
+        });*/
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        /*if (!status){
+            mediaPlayer.setVolume(0, 0);
+            status = true;
+        } else {
+            mediaPlayer.setVolume(1, 1);
+            status = false;
+        }*/
+        mediaPlayer.stop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mediaPlayer.stop();
+        super.onDestroy();
+    }
+
+
     public void agregarSimbolo(View vista){
         if (estado == 0) {
             int numBoton = Arrays.asList(arregloBotones).indexOf(vista.getId()); //Obtener el botón pulsado
@@ -81,9 +133,6 @@ public class TicTacToe extends AppCompatActivity {
                 terminarPartida();
 
                 if (estado == 0) {
-
-
-
 
                     handler.postDelayed(new Runnable() {
                         @Override

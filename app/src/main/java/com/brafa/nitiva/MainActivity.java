@@ -78,6 +78,8 @@ public class MainActivity extends AppCompatActivity {
                         "Puedes ver una pista presionando el botón de '?'";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
+                //mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.hangman);
+                //mediaPlayer.start();
                 startActivity(intent);
                 finish();
             }
@@ -90,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 instruccion="¡Memoriza el número que se muestra antes de que desaparezca y escríbelo para avanzar de nivel!";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
+                //mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.nummemory);
+                //mediaPlayer.start();
                 startActivity(intent);
                 finish();
             }
@@ -103,6 +107,8 @@ public class MainActivity extends AppCompatActivity {
                         "Toca las tarjetas para revelar la imagen y buscar en donde se encontraba la pareja";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
+                //mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.memory);
+                //mediaPlayer.start();
                 startActivity(intent);
                 finish();
             }
@@ -116,6 +122,8 @@ public class MainActivity extends AppCompatActivity {
                         "Toca la tarjeta para colocar la 'X' estratégicamente";
                 intent.putExtra("instruccion", instruccion);
                 intent.putExtra("game", game);
+                //mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.tictactoe);
+                //mediaPlayer.start();
                 startActivity(intent);
                 finish();
             }
@@ -135,8 +143,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.adaytoremember);
-        mediaPlayer.start();
+        //if  (!status) {
+            mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.adaytoremember);
+            mediaPlayer.start();
+        //    status = true;
+        //}
 
         sound = findViewById(R.id.btnSound);
         sound.setOnClickListener(new View.OnClickListener() {
@@ -153,6 +164,68 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        /*hangman.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Instruction.class);
+                game="Hangman";
+                instruccion="¡Trata de adivinar la palabra eligiendo las letras de la pantalla!\n" +
+                        "Puedes ver una pista presionando el botón de '?'";
+                intent.putExtra("instruccion", instruccion);
+                intent.putExtra("game", game);
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.hangman);
+                mediaPlayer.start();
+                startActivity(intent);
+                finish();
+            }
+        });
+        numberMemory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Instruction.class);
+                game="NumberMemory";
+                instruccion="¡Memoriza el número que se muestra antes de que desaparezca y escríbelo para avanzar de nivel!";
+                intent.putExtra("instruccion", instruccion);
+                intent.putExtra("game", game);
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.nummemory);
+                mediaPlayer.start();
+                startActivity(intent);
+                finish();
+            }
+        });
+        memory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Instruction.class);
+                game="Memory";
+                instruccion="¡Pon atención a la posición de las imágenes en la pantalla antes de que desaparezcan!\n" +
+                        "Toca las tarjetas para revelar la imagen y buscar en donde se encontraba la pareja";
+                intent.putExtra("instruccion", instruccion);
+                intent.putExtra("game", game);
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.memory);
+                mediaPlayer.start();
+                startActivity(intent);
+                finish();
+            }
+        });
+        tictactoe.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, Instruction.class);
+                game="TicTacToe";
+                instruccion="¡Piénsalo con calma!\n" +
+                        "Toca la tarjeta para colocar la 'X' estratégicamente";
+                intent.putExtra("instruccion", instruccion);
+                intent.putExtra("game", game);
+                mediaPlayer = MediaPlayer.create(MainActivity.this, R.raw.tictactoe);
+                mediaPlayer.start();
+                startActivity(intent);
+                finish();
+            }
+        });*/
+
+
     }
 
     @Override
