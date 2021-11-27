@@ -3,6 +3,7 @@ package com.brafa.nitiva;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -32,6 +33,8 @@ public class NumbersMemoryGame extends AppCompatActivity {
     private static final long TOTAL_TIME = 6000;
     Boolean timerContinue;
     long timeLeft = TOTAL_TIME;
+    MediaPlayer mediaPlayer;
+    boolean status = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,6 +43,49 @@ public class NumbersMemoryGame extends AppCompatActivity {
         cargarJuego();
         cargarBotones();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        /*sound = findViewById(R.id.btnSound);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            mediaPlayer = MediaPlayer.create(NumbersMemoryGame.this, R.raw.nummemory);
+        mediaPlayer.start();
+                if (!status){
+                    mediaPlayer.setVolume(0, 0);
+                    sound.setImageResource(R.drawable.mute);
+                    status = true;
+                } else {
+                    mediaPlayer.setVolume(1, 1);
+                    sound.setImageResource(R.drawable.volume);
+                    status = false;
+                }
+            }
+        });*/
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        /*if (!status){
+            mediaPlayer.setVolume(0, 0);
+            status = true;
+        } else {
+            mediaPlayer.setVolume(1, 1);
+            status = false;
+        }*/
+        mediaPlayer.stop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mediaPlayer.stop();
+        super.onDestroy();
+    }
+
     public void cargarBotones(){
         salir = findViewById(R.id.imageButtonSalir);
         reiniciar = findViewById(R.id.imageButtonReiniciar);
