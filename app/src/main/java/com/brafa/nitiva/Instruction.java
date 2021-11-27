@@ -65,4 +65,10 @@ public class Instruction extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
 }
