@@ -33,7 +33,7 @@ public class HangmanGame extends AppCompatActivity {
     Random random = new Random();
     private String actual;
     ScrollView scrollView;
-    ImageButton salir, reiniciar, btnAsk;
+    ImageButton salir, reiniciar, btnAsk, sound;
     private WordAdapter wordAdapter;
     FrameLayout frameLayout;
     private GridView wordView;
@@ -65,23 +65,26 @@ public class HangmanGame extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        /*sound = findViewById(R.id.btnSound);
+        mediaPlayer = MediaPlayer.create(HangmanGame.this, R.raw.hangman);
+        //mediaPlayer.start();
+
+        sound = findViewById(R.id.imageButtonSound);
         sound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            mediaPlayer = MediaPlayer.create(HangmanGame.this, R.raw.hangman);
-            mediaPlayer.start();
+
                 if (!status){
-                    mediaPlayer.setVolume(0, 0);
+                    mediaPlayer.start();
                     sound.setImageResource(R.drawable.mute);
                     status = true;
                 } else {
-                    mediaPlayer.setVolume(1, 1);
+                    mediaPlayer.stop();
                     sound.setImageResource(R.drawable.volume);
+                    mediaPlayer = MediaPlayer.create(HangmanGame.this, R.raw.hangman);
                     status = false;
                 }
             }
-        });*/
+        });
     }
 
     @Override

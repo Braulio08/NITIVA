@@ -19,7 +19,7 @@ import java.util.Random;
 public class TicTacToe extends AppCompatActivity {
 
     TextView txtWin;
-    Button sound;
+    ImageButton sound;
     ImageButton close, again;
     Integer[] arregloBotones;
     MediaPlayer mediaPlayer;
@@ -75,24 +75,25 @@ public class TicTacToe extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
-        /*sound = findViewById(R.id.btnSound);
+        mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.tictactoe);
+        //mediaPlayer.start();
+        sound = findViewById(R.id.imageButtonSound);
         sound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.tictactoe);
-            mediaPlayer.start();
+
                 if (!status){
-                    mediaPlayer.setVolume(0, 0);
+                    mediaPlayer.start();
                     sound.setImageResource(R.drawable.mute);
                     status = true;
                 } else {
-                    mediaPlayer.setVolume(1, 1);
+                    mediaPlayer.stop();
                     sound.setImageResource(R.drawable.volume);
+                    mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.tictactoe);
                     status = false;
                 }
             }
-        });*/
+        });
     }
 
     @Override
