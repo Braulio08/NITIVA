@@ -151,6 +151,15 @@
             android:background="@drawable/buttonshape"
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/angulo_a_la_izquierda" />
+        <ImageButton
+            android:id="@+id/imageButtonSound"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/volume" />
 
         <ImageButton
             android:id="@+id/imageButtonAgain"

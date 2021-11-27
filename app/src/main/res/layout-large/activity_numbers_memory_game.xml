@@ -24,6 +24,15 @@
             android:textColor="@color/black"
             android:textSize="48sp" />
 
+        <ImageButton
+            android:id="@+id/imageButtonSound"
+            android:layout_width="65dp"
+            android:layout_height="85dp"
+            android:layout_weight="1"
+            android:background="@drawable/buttonshape"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/volume" />
+
     </LinearLayout>
 
     <TextView
