@@ -34,7 +34,7 @@ public class MemoryGame extends AppCompatActivity {
     Random random = new Random();
     int numberRandom;
     ArrayList<Integer>arrayCaos;
-    ImageButton primero;
+    ImageButton primero, sound;
     int number1, number2;
     boolean bandera = false;
     final Handler handler = new Handler();
@@ -58,23 +58,26 @@ public class MemoryGame extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        /*sound = findViewById(R.id.btnSound);
+        mediaPlayer = MediaPlayer.create(MemoryGame.this, R.raw.memory);
+        //mediaPlayer.start();
+
+        sound = findViewById(R.id.imageButtonSound);
         sound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-            mediaPlayer = MediaPlayer.create(MemoryGame.this, R.raw.memory);
-            mediaPlayer.start();
+
                 if (!status){
-                    mediaPlayer.setVolume(0, 0);
+                    mediaPlayer.start();
                     sound.setImageResource(R.drawable.mute);
                     status = true;
                 } else {
-                    mediaPlayer.setVolume(1, 1);
-                    sound.setImageResource(R.drawable.mute);
+                    mediaPlayer.stop();
+                    sound.setImageResource(R.drawable.volume);
+                    mediaPlayer = MediaPlayer.create(MemoryGame.this, R.raw.memory);
                     status = false;
                 }
             }
-        });*/
+        });
     }
 
     @Override
