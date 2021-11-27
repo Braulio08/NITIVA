@@ -7,6 +7,7 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.Gravity;
@@ -42,6 +43,8 @@ public class HangmanGame extends AppCompatActivity {
     GridLayout gridLetters;
     private int numCorr;
     String oportunidades;
+    MediaPlayer mediaPlayer;
+    boolean status = false;
     final Handler handler = new Handler();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,49 @@ public class HangmanGame extends AppCompatActivity {
         play();
         cargarBotones();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        /*sound = findViewById(R.id.btnSound);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            mediaPlayer = MediaPlayer.create(HangmanGame.this, R.raw.hangman);
+            mediaPlayer.start();
+                if (!status){
+                    mediaPlayer.setVolume(0, 0);
+                    sound.setImageResource(R.drawable.mute);
+                    status = true;
+                } else {
+                    mediaPlayer.setVolume(1, 1);
+                    sound.setImageResource(R.drawable.volume);
+                    status = false;
+                }
+            }
+        });*/
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        /*if (!status){
+            mediaPlayer.setVolume(0, 0);
+            status = true;
+        } else {
+            mediaPlayer.setVolume(1, 1);
+            status = false;
+        }*/
+        mediaPlayer.stop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mediaPlayer.stop();
+        super.onDestroy();
+    }
+
     private void activarBotones(GridLayout view){
         for (int i = 0; i < view.getChildCount(); i++) {
             Button btn = (Button) view.getChildAt(i);

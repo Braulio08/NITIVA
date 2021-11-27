@@ -224,15 +224,11 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         });*/
-
-
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-
-
         /*if (!status){
             mediaPlayer.setVolume(0, 0);
             status = true;

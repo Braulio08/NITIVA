@@ -76,23 +76,19 @@ public class TicTacToe extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
 
-        //if  (status == false) {
-            mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.tictactoe);
-            mediaPlayer.start();
-        //    status = true;
-        //}
-
         /*sound = findViewById(R.id.btnSound);
         sound.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+            mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.tictactoe);
+            mediaPlayer.start();
                 if (!status){
                     mediaPlayer.setVolume(0, 0);
-                    Toast.makeText(getApplicationContext(), "Has desactivado el sonido.", Toast.LENGTH_LONG).show();
+                    sound.setImageResource(R.drawable.mute);
                     status = true;
                 } else {
                     mediaPlayer.setVolume(1, 1);
-                    Toast.makeText(getApplicationContext(), "Has activado el sonido.", Toast.LENGTH_LONG).show();
+                    sound.setImageResource(R.drawable.volume);
                     status = false;
                 }
             }

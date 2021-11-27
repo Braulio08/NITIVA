@@ -3,6 +3,7 @@ package com.brafa.nitiva;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
@@ -36,6 +37,8 @@ public class MemoryGame extends AppCompatActivity {
     int number1, number2;
     boolean bandera = false;
     final Handler handler = new Handler();
+    MediaPlayer mediaPlayer;
+    boolean status = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,6 +46,49 @@ public class MemoryGame extends AppCompatActivity {
         setContentView(R.layout.activity_memory_game);
         iniciar();
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        /*sound = findViewById(R.id.btnSound);
+        sound.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            mediaPlayer = MediaPlayer.create(MemoryGame.this, R.raw.memory);
+            mediaPlayer.start();
+                if (!status){
+                    mediaPlayer.setVolume(0, 0);
+                    sound.setImageResource(R.drawable.mute);
+                    status = true;
+                } else {
+                    mediaPlayer.setVolume(1, 1);
+                    sound.setImageResource(R.drawable.mute);
+                    status = false;
+                }
+            }
+        });*/
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        /*if (!status){
+            mediaPlayer.setVolume(0, 0);
+            status = true;
+        } else {
+            mediaPlayer.setVolume(1, 1);
+            status = false;
+        }*/
+        mediaPlayer.stop();
+    }
+
+    @Override
+    protected void onDestroy() {
+        mediaPlayer.stop();
+        super.onDestroy();
+    }
+
     private void cargarMatriz(){
         imb00 = findViewById(R.id.btn00);
         imb01 = findViewById(R.id.btn01);
