@@ -44,21 +44,21 @@
             app:iconTint="@color/black" />
 
         <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Botones"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:iconTint="@color/black" />
-
-        <Button
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Alzheimer"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Botones"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:iconTint="@color/black" />
