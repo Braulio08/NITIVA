@@ -86,7 +86,7 @@ public class TicTacToe extends AppCompatActivity {
                     mediaPlayer.start();
                     sound.setImageResource(R.drawable.volume);
                     status = true;
-                } else {
+                } else if (!mediaPlayer.isPlaying()){
                     mediaPlayer.stop();
                     sound.setImageResource(R.drawable.mute);
                     mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.hangman);

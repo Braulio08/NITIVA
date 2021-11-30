@@ -70,12 +70,17 @@ public class MemoryGame extends AppCompatActivity {
                     mediaPlayer.start();
                     sound.setImageResource(R.drawable.volume);
                     status = true;
-                } else {
+                } else if (!mediaPlayer.isPlaying()){
                     mediaPlayer.stop();
                     sound.setImageResource(R.drawable.mute);
                     mediaPlayer = MediaPlayer.create(MemoryGame.this, R.raw.hangman);
                     status = false;
                 }
+
+
+
+
+
             }
         });
     }
