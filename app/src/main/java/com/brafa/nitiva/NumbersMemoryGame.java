@@ -58,12 +58,12 @@ public class NumbersMemoryGame extends AppCompatActivity {
 
                 if (!status){
                     mediaPlayer.start();
-                    sound.setImageResource(R.drawable.mute);
+                    sound.setImageResource(R.drawable.volume);
                     status = true;
                 } else {
                     mediaPlayer.stop();
-                    sound.setImageResource(R.drawable.volume);
-                    mediaPlayer = MediaPlayer.create(NumbersMemoryGame.this, R.raw.nummemory);
+                    sound.setImageResource(R.drawable.mute);
+                    mediaPlayer = MediaPlayer.create(NumbersMemoryGame.this, R.raw.hangman);
                     status = false;
                 }
             }

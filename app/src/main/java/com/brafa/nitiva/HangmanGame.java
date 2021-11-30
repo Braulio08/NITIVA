@@ -75,11 +75,11 @@ public class HangmanGame extends AppCompatActivity {
 
                 if (!status){
                     mediaPlayer.start();
-                    sound.setImageResource(R.drawable.mute);
+                    sound.setImageResource(R.drawable.volume);
                     status = true;
                 } else {
                     mediaPlayer.stop();
-                    sound.setImageResource(R.drawable.volume);
+                    sound.setImageResource(R.drawable.mute);
                     mediaPlayer = MediaPlayer.create(HangmanGame.this, R.raw.hangman);
                     status = false;
                 }

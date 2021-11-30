@@ -32,7 +32,7 @@
             android:layout_weight="1"
             android:background="@drawable/buttonshape"
             android:scaleType="fitCenter"
-            app:srcCompat="@drawable/volume" />
+            app:srcCompat="@drawable/mute" />
 
     </LinearLayout>
 

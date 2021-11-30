@@ -84,12 +84,12 @@ public class TicTacToe extends AppCompatActivity {
 
                 if (!status){
                     mediaPlayer.start();
-                    sound.setImageResource(R.drawable.mute);
+                    sound.setImageResource(R.drawable.volume);
                     status = true;
                 } else {
                     mediaPlayer.stop();
-                    sound.setImageResource(R.drawable.volume);
-                    mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.tictactoe);
+                    sound.setImageResource(R.drawable.mute);
+                    mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.hangman);
                     status = false;
                 }
             }
