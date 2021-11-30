@@ -41,7 +41,7 @@ public class About extends AppCompatActivity {
 
         FragmentManager fragmentManager = getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.fragmentContainerView, acercaDeFragment);
+        fragmentTransaction.add(R.id.fragmentContainerView, blankFragment);
         fragmentTransaction.commit();
 
 

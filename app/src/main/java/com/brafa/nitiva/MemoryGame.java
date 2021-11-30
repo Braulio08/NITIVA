@@ -68,12 +68,12 @@ public class MemoryGame extends AppCompatActivity {
 
                 if (!status){
                     mediaPlayer.start();
-                    sound.setImageResource(R.drawable.mute);
+                    sound.setImageResource(R.drawable.volume);
                     status = true;
                 } else {
                     mediaPlayer.stop();
-                    sound.setImageResource(R.drawable.volume);
-                    mediaPlayer = MediaPlayer.create(MemoryGame.this, R.raw.memory);
+                    sound.setImageResource(R.drawable.mute);
+                    mediaPlayer = MediaPlayer.create(MemoryGame.this, R.raw.hangman);
                     status = false;
                 }
             }

@@ -11,7 +11,6 @@
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
-        android:name="com.brafa.nitiva.AcercaDeFragment"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:visibility="visible"
@@ -37,18 +36,9 @@
             android:id="@+id/button4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:layout_weight="1"
             android:text="Acerca de"
-            android:textColor="@color/black"
-            android:textSize="14sp"
-            app:iconTint="@color/black" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Botones"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:iconTint="@color/black" />
@@ -57,8 +47,20 @@
             android:id="@+id/button2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:layout_weight="1"
-            android:text="Alzheimer"
+            android:text="Responsables"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            app:iconTint="@color/black" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:text="Botones"
             android:textColor="@color/black"
             android:textSize="14sp"
             app:iconTint="@color/black" />
