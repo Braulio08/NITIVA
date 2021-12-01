@@ -16,18 +16,18 @@
         <ImageView
             android:id="@+id/imageView5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="217dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:src="@drawable/background" />
+            android:src="@drawable/logotipo_tcu_color" />
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="252dp"
+            android:layout_height="174dp"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:src="@drawable/background" />
+            android:src="@drawable/logoutn" />
 
         <ImageView
             android:id="@+id/imageView7"
