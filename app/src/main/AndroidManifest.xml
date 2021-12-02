@@ -10,7 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/NewTheme">
         <activity
-            android:name=".TicTacToe1vs1"
+            android:name=".TicTacToe1vs1"            
+            android:exported="false" />
+        <activity
+            android:name=".ChooseTicTac"
             android:exported="false" />
         <activity
             android:name=".About"
