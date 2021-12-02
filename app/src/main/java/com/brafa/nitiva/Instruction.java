@@ -48,7 +48,7 @@ public class Instruction extends AppCompatActivity {
                         finish();
                         break;
                     case "TicTacToe":
-                        Intent intent4 = new Intent(Instruction.this, TicTacToe.class);
+                        Intent intent4 = new Intent(Instruction.this, ChooseTicTac.class);
                         startActivity(intent4);
                         finish();
                         break;
