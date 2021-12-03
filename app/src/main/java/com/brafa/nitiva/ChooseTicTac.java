@@ -30,7 +30,7 @@ public class ChooseTicTac extends AppCompatActivity {
         btnPareja.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ChooseTicTac.this, TicTacToe.class);
+                Intent intent = new Intent(ChooseTicTac.this, TicTacToe1vs1.class);
                 startActivity(intent);
                 finish();
             }

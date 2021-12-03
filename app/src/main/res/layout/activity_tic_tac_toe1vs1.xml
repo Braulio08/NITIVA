@@ -1,135 +1,146 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TicTacToe1vs1">
-
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="385dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgView1"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-
-            <ImageView
-                android:id="@+id/imgView2"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-
-            <ImageView
-                android:id="@+id/imgView3"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgView4"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-
-            <ImageView
-                android:id="@+id/imgView5"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-
-            <ImageView
-                android:id="@+id/imgView6"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <ImageView
-                android:id="@+id/imgView7"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-
-            <ImageView
-                android:id="@+id/imgView8"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-
-            <ImageView
-                android:id="@+id/imgView9"
-                android:layout_width="130dp"
-                android:layout_height="130dp"
-                android:onClick="agregarSimbolo"
-                app:srcCompat="@drawable/stop" />
-        </TableRow>
-
-    </TableLayout>
-
-
-    <ImageView
-        android:id="@+id/imgViewTurnoO"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginEnd="33dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imgViewTurnoX"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:srcCompat="@drawable/circle" />
-
-    <ImageView
-        android:id="@+id/imgViewTurnoX"
-        android:layout_width="0dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginEnd="127dp"
-        app:layout_constraintEnd_toStartOf="@+id/imgViewTurnoO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:srcCompat="@drawable/cancel" />
+    android:background="#f9e669"
+    android:orientation="vertical"
+    tools:context=".TicTacToe">
 
     <LinearLayout
-        android:id="@+id/linearLayout9"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtTitulo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="¡Gato!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="60sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtTurno"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Turno: X"
+            android:textAlignment="center"
+            android:textColor="@color/logo_nitiva_background"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+    </LinearLayout>
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <Button
+            android:id="@+id/imgView1"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="10dp"
+            android:onClick="agregarSimbolo" />
+
+        <Button
+            android:id="@+id/imgView2"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="10dp"
+            android:onClick="agregarSimbolo" />
+
+        <Button
+            android:id="@+id/imgView3"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:onClick="agregarSimbolo" />
+
+        <Button
+            android:id="@+id/imgView4"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="10dp"
+            android:onClick="agregarSimbolo" />
+
+        <Button
+            android:id="@+id/imgView5"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="10dp"
+            android:onClick="agregarSimbolo" />
+
+        <Button
+            android:id="@+id/imgView6"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:onClick="agregarSimbolo" />
+
+        <Button
+            android:id="@+id/imgView7"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="10dp"
+            android:onClick="agregarSimbolo" />
+
+        <Button
+            android:id="@+id/imgView8"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:layout_columnWeight="1"
+            android:layout_marginRight="10dp"
+            android:onClick="agregarSimbolo" />
+
+        <Button
+            android:id="@+id/imgView9"
+            android:layout_width="100dp"
+            android:layout_height="130dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:layout_columnWeight="1"
+            android:onClick="agregarSimbolo" />
+    </GridLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:gravity="bottom"
-        android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:orientation="horizontal">
 
         <ImageButton
             android:id="@+id/imageButtonClose"
@@ -162,4 +173,4 @@
             app:srcCompat="@drawable/gira_a_la_derecha" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
