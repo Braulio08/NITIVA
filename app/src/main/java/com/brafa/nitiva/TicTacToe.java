@@ -11,7 +11,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.Arrays;
 import java.util.Random;
@@ -44,13 +43,13 @@ public class TicTacToe extends AppCompatActivity {
 
         close = findViewById(R.id.imageButtonClose);
         again = findViewById(R.id.imageButtonAgain);
-        txtWin = findViewById(R.id.txtResult);
+        txtWin = findViewById(R.id.txtTurno);
         txtWin.setVisibility(View.INVISIBLE);
 
         arregloBotones = new Integer[] {
-                R.id.btn1,R.id.btn2, R.id.btn3,
-                R.id.btn4, R.id.btn5, R.id.btn6,
-                R.id.btn7, R.id.btn8, R.id.btn9
+                R.id.imgView1,R.id.imgView2, R.id.imgView3,
+                R.id.imgView4, R.id.imgView5, R.id.imgView6,
+                R.id.imgView7, R.id.imgView8, R.id.imgView9
         };
 
         close.setOnClickListener(new View.OnClickListener() {
@@ -89,7 +88,7 @@ public class TicTacToe extends AppCompatActivity {
                 } else if (!mediaPlayer.isPlaying()){
                     mediaPlayer.stop();
                     sound.setImageResource(R.drawable.mute);
-                    mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.hangman);
+                    mediaPlayer = MediaPlayer.create(TicTacToe.this, R.raw.tictactoe);
                     status = false;
                 }
             }
