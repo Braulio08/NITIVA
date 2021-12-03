@@ -8,8 +8,11 @@ import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -341,21 +344,49 @@ public class TicTacToe1vs1 extends AppCompatActivity {
     }*/
 
     public void obtenerGanador() {
+
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view = layoutInflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.toast1));
+        TextView textView = view.findViewById(R.id.textView8);
+        textView.setText("Ha ganado el jugador 1");
+        final Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(view);
+
+        LayoutInflater layoutInflater2 = getLayoutInflater();
+        View view2 = layoutInflater2.inflate(R.layout.custom2_toast, (ViewGroup) findViewById(R.id.toast2));
+        TextView textView2 = view2.findViewById(R.id.textView8);
+        textView2.setText("Ha ganado el jugador 2");
+        final Toast toast2 = new Toast(getApplicationContext());
+        toast2.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast2.setDuration(Toast.LENGTH_SHORT);
+        toast2.setView(view2);
+
+        LayoutInflater layoutInflater3 = getLayoutInflater();
+        View view3 = layoutInflater3.inflate(R.layout.custom3_toast, (ViewGroup) findViewById(R.id.toast3));
+        TextView textView3 = view3.findViewById(R.id.textView8);
+        textView3.setText("Ha sido un empate");
+        final Toast toast3 = new Toast(getApplicationContext());
+        toast3.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast3.setDuration(Toast.LENGTH_SHORT);
+        toast3.setView(view3);
+
+
+
+
         if (ganaJugador1 == true) {
-            Toast toast = Toast.makeText(this, "Ha ganado el jugador 1", Toast.LENGTH_SHORT);
             toast.show();
             jugador1++;
             reiniciarActivity(this);
         }
         if (ganaJugador2 == true) {
-            Toast toast = Toast.makeText(this, "Ha ganado el jugador 2", Toast.LENGTH_SHORT);
-            toast.show();
+            toast2.show();
             jugador2++;
             reiniciarActivity(this);
         }
         if (tiradas == 9 && ganaJugador1 == false && ganaJugador2 == false) {
-            Toast toast = Toast.makeText(this, "Ha sido un empate", Toast.LENGTH_SHORT);
-            toast.show();
+            toast3.show();
             empate++;
             reiniciarActivity(this);
         }
