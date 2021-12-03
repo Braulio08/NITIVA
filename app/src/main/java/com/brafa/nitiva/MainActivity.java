@@ -13,7 +13,10 @@ import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -141,6 +144,26 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onResume() {
+
+        LayoutInflater layoutInflater = getLayoutInflater();
+        View view = layoutInflater.inflate(R.layout.custom_toast, (ViewGroup) findViewById(R.id.toast1));
+        TextView textView = view.findViewById(R.id.textView8);
+        textView.setText("Has desactivado el sonido");
+        final Toast toast = new Toast(getApplicationContext());
+        toast.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast.setDuration(Toast.LENGTH_SHORT);
+        toast.setView(view);
+
+        LayoutInflater layoutInflater2 = getLayoutInflater();
+        View view2 = layoutInflater2.inflate(R.layout.custom2_toast, (ViewGroup) findViewById(R.id.toast2));
+        TextView textView2 = view2.findViewById(R.id.textView8);
+        textView2.setText("Has activado el sonido");
+        final Toast toast2 = new Toast(getApplicationContext());
+        toast2.setGravity(Gravity.CENTER_VERTICAL, 0, 0);
+        toast2.setDuration(Toast.LENGTH_SHORT);
+        toast2.setView(view2);
+
+
         super.onResume();
 
         //if  (!status) {
@@ -155,11 +178,11 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 if (!status){
                     mediaPlayer.setVolume(0, 0);
-                    Toast.makeText(getApplicationContext(), "Has desactivado el sonido.", Toast.LENGTH_LONG).show();
+                    toast.show();
                     status = true;
                 } else {
                     mediaPlayer.setVolume(1, 1);
-                    Toast.makeText(getApplicationContext(), "Has activado el sonido.", Toast.LENGTH_LONG).show();
+                    toast2.show();
                     status = false;
                 }
             }
