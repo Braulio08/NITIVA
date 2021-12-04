@@ -3,11 +3,9 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+
     <string name="proyecto">La implementación de este subproyecto tiene su enfoque en la población adulta mayor,
-        cuyas facultades físicas y mentales se han deteriorado debido a su avanzada edad o diversas situaciones
-        por las que han pasado a lo largo de su vida cuyo peso mental y físico ha comenzado a verse reflejado en
-        su diario vivir, dificultando la realización de varias tareas cotidianas, por ende, la importancia del desarrollo
-        de este subproyecto yace en la creación de una aplicación que pueda utilizarse en varios dispositivos móviles,
-        capaz de aportar ejercicios mentales orientados en la población adulta mayor y, además, ralentizar los efectos
-        que puede llegar a producir una de las tantas enfermedades degenerativas descubiertas actualmente.  </string>
+    el contenido de esta aplicación está diseñado para estimular la memoria así como otras secciones cognitivas
+    del usuario, utilizando como medio el entretenimiento gracias a juegos tales como gato, buscar la pareja o
+        ahorcado.</string>
 </resources>
